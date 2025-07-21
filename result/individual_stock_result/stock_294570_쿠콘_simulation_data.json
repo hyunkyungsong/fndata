@@ -1,0 +1,3691 @@
+{
+    "stock_code": "294570",
+    "simulation_date": "20250720_120606",
+    "simulation_details": [
+        {
+            "date": "20250711",
+            "best_result": {
+                "stock_code": "294570",
+                "date": "20250711",
+                "initial_capital": 10000000,
+                "final_value": 10000000,
+                "profit": 0,
+                "profit_rate": 0.0,
+                "rsi_oversold": 25,
+                "rsi_overbought": 65,
+                "total_trades": 0,
+                "buy_trades": 0,
+                "sell_trades": 0,
+                "avg_buy_price": 0,
+                "avg_sell_price": 0,
+                "trades": [],
+                "trade_details": [],
+                "portfolio_values": [
+                    {
+                        "timestamp": "20250711112000",
+                        "price": 37050.0,
+                        "rsi": 42.7007299270073,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711113000",
+                        "price": 37100.0,
+                        "rsi": 43.7327697114501,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711114000",
+                        "price": 37200.0,
+                        "rsi": 45.83407052547055,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711115000",
+                        "price": 37350.0,
+                        "rsi": 48.91580480339644,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711120000",
+                        "price": 37300.0,
+                        "rsi": 47.936763251344175,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711121000",
+                        "price": 37350.0,
+                        "rsi": 49.03527892074861,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711122000",
+                        "price": 37350.0,
+                        "rsi": 49.03527892074861,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711123000",
+                        "price": 38450.0,
+                        "rsi": 66.87059406367572,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711124000",
+                        "price": 41700.0,
+                        "rsi": 84.32479030107123,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711125000",
+                        "price": 42500.0,
+                        "rsi": 86.24573515767322,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711130000",
+                        "price": 41000.0,
+                        "rsi": 69.13762775606322,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711131000",
+                        "price": 41750.0,
+                        "rsi": 72.11596979634555,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711132000",
+                        "price": 42300.0,
+                        "rsi": 74.09061248974075,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711133000",
+                        "price": 41150.0,
+                        "rsi": 63.900943364838895,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711134000",
+                        "price": 40500.0,
+                        "rsi": 58.96477732882777,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711135000",
+                        "price": 40150.0,
+                        "rsi": 56.436738340917444,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711140000",
+                        "price": 39800.0,
+                        "rsi": 53.94596200956042,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711141000",
+                        "price": 40200.0,
+                        "rsi": 56.31867525638705,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711142000",
+                        "price": 41400.0,
+                        "rsi": 62.55190590604932,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711143000",
+                        "price": 40400.0,
+                        "rsi": 55.45076144000908,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711144000",
+                        "price": 41000.0,
+                        "rsi": 58.495296964029116,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711145000",
+                        "price": 41600.0,
+                        "rsi": 61.3405513392196,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711150000",
+                        "price": 41000.0,
+                        "rsi": 57.12336984617941,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711151000",
+                        "price": 41550.0,
+                        "rsi": 59.848413415096175,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250711153000",
+                        "price": 41600.0,
+                        "rsi": 60.09670020555281,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    }
+                ]
+            },
+            "all_simulations": [
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250711",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                }
+            ]
+        },
+        {
+            "date": "20250714",
+            "best_result": {
+                "stock_code": "294570",
+                "date": "20250714",
+                "initial_capital": 10000000,
+                "final_value": 10834900.0,
+                "profit": 834900.0,
+                "profit_rate": 8.349,
+                "rsi_oversold": 35,
+                "rsi_overbought": 65,
+                "total_trades": 2,
+                "buy_trades": 1,
+                "sell_trades": 1,
+                "avg_buy_price": 39500.0,
+                "avg_sell_price": 42800.0,
+                "trades": [
+                    {
+                        "timestamp": "20250714090000",
+                        "action": "BUY",
+                        "price": 39500.0,
+                        "shares": 253.0,
+                        "cost": 9993500.0,
+                        "rsi": 31.825224666873254,
+                        "capital": 6500.0,
+                        "shares_held": 253.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250714125000",
+                        "action": "SELL",
+                        "price": 42800.0,
+                        "shares": 253.0,
+                        "revenue": 10828400.0,
+                        "rsi": 66.47712088168358,
+                        "capital": 10834900.0,
+                        "shares_held": 0,
+                        "portfolio_value": 10834900.0
+                    }
+                ],
+                "trade_details": [
+                    {
+                        "time": "20250714090000",
+                        "action": "매수",
+                        "price": "39,500.0원",
+                        "quantity": "253.0주",
+                        "amount": "9,993,500.0원",
+                        "rsi": "31.83",
+                        "remaining_capital": "6,500.0원",
+                        "total_shares": "253.0주"
+                    },
+                    {
+                        "time": "20250714125000",
+                        "action": "매도",
+                        "price": "42,800.0원",
+                        "quantity": "253.0주",
+                        "amount": "10,828,400.0원",
+                        "rsi": "66.48",
+                        "remaining_capital": "10,834,900.0원",
+                        "total_shares": "0주"
+                    }
+                ],
+                "portfolio_values": [
+                    {
+                        "timestamp": "20250714090000",
+                        "price": 39500.0,
+                        "rsi": 31.825224666873254,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250714091000",
+                        "price": 40000.0,
+                        "rsi": 34.86825624558766,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10126500.0
+                    },
+                    {
+                        "timestamp": "20250714092000",
+                        "price": 40000.0,
+                        "rsi": 34.86825624558766,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10126500.0
+                    },
+                    {
+                        "timestamp": "20250714093000",
+                        "price": 39600.0,
+                        "rsi": 33.481662883378945,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10025300.0
+                    },
+                    {
+                        "timestamp": "20250714094000",
+                        "price": 39900.0,
+                        "rsi": 35.55169154057333,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10101200.0
+                    },
+                    {
+                        "timestamp": "20250714095000",
+                        "price": 39850.0,
+                        "rsi": 35.35421767006868,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10088550.0
+                    },
+                    {
+                        "timestamp": "20250714100000",
+                        "price": 39700.0,
+                        "rsi": 34.73095370746894,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10050600.0
+                    },
+                    {
+                        "timestamp": "20250714101000",
+                        "price": 39650.0,
+                        "rsi": 34.51254437488333,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10037950.0
+                    },
+                    {
+                        "timestamp": "20250714102000",
+                        "price": 39750.0,
+                        "rsi": 35.38769815876756,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10063250.0
+                    },
+                    {
+                        "timestamp": "20250714103000",
+                        "price": 39850.0,
+                        "rsi": 36.304383916025856,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10088550.0
+                    },
+                    {
+                        "timestamp": "20250714104000",
+                        "price": 39950.0,
+                        "rsi": 37.2629325838746,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10113850.0
+                    },
+                    {
+                        "timestamp": "20250714105000",
+                        "price": 39800.0,
+                        "rsi": 36.37857828726793,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10075900.0
+                    },
+                    {
+                        "timestamp": "20250714110000",
+                        "price": 39600.0,
+                        "rsi": 35.17972745281219,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10025300.0
+                    },
+                    {
+                        "timestamp": "20250714111000",
+                        "price": 39650.0,
+                        "rsi": 35.74978500654227,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10037950.0
+                    },
+                    {
+                        "timestamp": "20250714112000",
+                        "price": 39700.0,
+                        "rsi": 36.35258509107233,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10050600.0
+                    },
+                    {
+                        "timestamp": "20250714113000",
+                        "price": 39700.0,
+                        "rsi": 36.35258509107233,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10050600.0
+                    },
+                    {
+                        "timestamp": "20250714114000",
+                        "price": 39550.0,
+                        "rsi": 35.20344108026262,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10012650.0
+                    },
+                    {
+                        "timestamp": "20250714115000",
+                        "price": 39800.0,
+                        "rsi": 38.682463970245685,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10075900.0
+                    },
+                    {
+                        "timestamp": "20250714120000",
+                        "price": 40200.0,
+                        "rsi": 43.87485603265117,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10177100.0
+                    },
+                    {
+                        "timestamp": "20250714121000",
+                        "price": 40050.0,
+                        "rsi": 42.42404513316114,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10139150.0
+                    },
+                    {
+                        "timestamp": "20250714122000",
+                        "price": 40750.0,
+                        "rsi": 50.628713209677365,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10316250.0
+                    },
+                    {
+                        "timestamp": "20250714123000",
+                        "price": 40600.0,
+                        "rsi": 49.01679615342375,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10278300.0
+                    },
+                    {
+                        "timestamp": "20250714124000",
+                        "price": 40500.0,
+                        "rsi": 47.92140613662537,
+                        "capital": 6500.0,
+                        "shares": 253.0,
+                        "portfolio_value": 10253000.0
+                    },
+                    {
+                        "timestamp": "20250714125000",
+                        "price": 42800.0,
+                        "rsi": 66.47712088168358,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714130000",
+                        "price": 43300.0,
+                        "rsi": 69.05814265971183,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714131000",
+                        "price": 42150.0,
+                        "rsi": 57.99767561683816,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714132000",
+                        "price": 41850.0,
+                        "rsi": 55.50042032403313,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714133000",
+                        "price": 41150.0,
+                        "rsi": 50.08174336556748,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714134000",
+                        "price": 41050.0,
+                        "rsi": 49.3406238185554,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714135000",
+                        "price": 41350.0,
+                        "rsi": 51.652115036114026,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714140000",
+                        "price": 41400.0,
+                        "rsi": 52.04485137241235,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714141000",
+                        "price": 41050.0,
+                        "rsi": 49.04173505019875,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714142000",
+                        "price": 41250.0,
+                        "rsi": 50.78917267657762,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714143000",
+                        "price": 41200.0,
+                        "rsi": 50.32455928575488,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714144000",
+                        "price": 41050.0,
+                        "rsi": 48.87992779391346,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714145000",
+                        "price": 40900.0,
+                        "rsi": 47.41414472140033,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714150000",
+                        "price": 40850.0,
+                        "rsi": 46.909180715082236,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714151000",
+                        "price": 41000.0,
+                        "rsi": 48.6751617264798,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    },
+                    {
+                        "timestamp": "20250714153000",
+                        "price": 41000.0,
+                        "rsi": 48.67516172647979,
+                        "capital": 10834900.0,
+                        "shares": 0,
+                        "portfolio_value": 10834900.0
+                    }
+                ]
+            },
+            "all_simulations": [
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10834900.0,
+                    "profit": 834900.0,
+                    "profit_rate": 8.349,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 39500.0,
+                    "avg_sell_price": 42800.0,
+                    "trade_details": [
+                        {
+                            "time": "20250714090000",
+                            "action": "매수",
+                            "price": "39,500.0원",
+                            "quantity": "253.0주",
+                            "amount": "9,993,500.0원",
+                            "rsi": "31.83",
+                            "remaining_capital": "6,500.0원",
+                            "total_shares": "253.0주"
+                        },
+                        {
+                            "time": "20250714125000",
+                            "action": "매도",
+                            "price": "42,800.0원",
+                            "quantity": "253.0주",
+                            "amount": "10,828,400.0원",
+                            "rsi": "66.48",
+                            "remaining_capital": "10,834,900.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10379500.0,
+                    "profit": 379500.0,
+                    "profit_rate": 3.795,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 39500.0,
+                    "avg_sell_price": 41000.0,
+                    "trade_details": [
+                        {
+                            "time": "20250714090000",
+                            "action": "매수",
+                            "price": "39,500.0원",
+                            "quantity": "253.0주",
+                            "amount": "9,993,500.0원",
+                            "rsi": "31.83",
+                            "remaining_capital": "6,500.0원",
+                            "total_shares": "253.0주"
+                        },
+                        {
+                            "time": "20250714153000",
+                            "action": "청산매도",
+                            "price": "41,000.0원",
+                            "quantity": "253.0주",
+                            "amount": "10,373,000.0원",
+                            "rsi": "48.68",
+                            "remaining_capital": "10,379,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250714",
+                    "initial_capital": 10000000,
+                    "final_value": 10379500.0,
+                    "profit": 379500.0,
+                    "profit_rate": 3.795,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 39500.0,
+                    "avg_sell_price": 41000.0,
+                    "trade_details": [
+                        {
+                            "time": "20250714090000",
+                            "action": "매수",
+                            "price": "39,500.0원",
+                            "quantity": "253.0주",
+                            "amount": "9,993,500.0원",
+                            "rsi": "31.83",
+                            "remaining_capital": "6,500.0원",
+                            "total_shares": "253.0주"
+                        },
+                        {
+                            "time": "20250714153000",
+                            "action": "청산매도",
+                            "price": "41,000.0원",
+                            "quantity": "253.0주",
+                            "amount": "10,373,000.0원",
+                            "rsi": "48.68",
+                            "remaining_capital": "10,379,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "20250715",
+            "best_result": {
+                "stock_code": "294570",
+                "date": "20250715",
+                "initial_capital": 10000000,
+                "final_value": 9828500.0,
+                "profit": -171500.0,
+                "profit_rate": -1.7149999999999999,
+                "rsi_oversold": 25,
+                "rsi_overbought": 65,
+                "total_trades": 2,
+                "buy_trades": 1,
+                "sell_trades": 1,
+                "avg_buy_price": 40750.0,
+                "avg_sell_price": 40050.0,
+                "trades": [
+                    {
+                        "timestamp": "20250715090000",
+                        "action": "BUY",
+                        "price": 40750.0,
+                        "shares": 245.0,
+                        "cost": 9983750.0,
+                        "rsi": 22.807017543859644,
+                        "capital": 16250.0,
+                        "shares_held": 245.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250715153000",
+                        "action": "FINAL_SELL",
+                        "price": 40050.0,
+                        "shares": 245.0,
+                        "revenue": 9812250.0,
+                        "rsi": 36.975556453777834,
+                        "capital": 9828500.0,
+                        "shares_held": 0,
+                        "portfolio_value": 9828500.0
+                    }
+                ],
+                "trade_details": [
+                    {
+                        "time": "20250715090000",
+                        "action": "매수",
+                        "price": "40,750.0원",
+                        "quantity": "245.0주",
+                        "amount": "9,983,750.0원",
+                        "rsi": "22.81",
+                        "remaining_capital": "16,250.0원",
+                        "total_shares": "245.0주"
+                    },
+                    {
+                        "time": "20250715153000",
+                        "action": "청산매도",
+                        "price": "40,050.0원",
+                        "quantity": "245.0주",
+                        "amount": "9,812,250.0원",
+                        "rsi": "36.98",
+                        "remaining_capital": "9,828,500.0원",
+                        "total_shares": "0주"
+                    }
+                ],
+                "portfolio_values": [
+                    {
+                        "timestamp": "20250715090000",
+                        "price": 40750.0,
+                        "rsi": 22.807017543859644,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250715091000",
+                        "price": 40400.0,
+                        "rsi": 20.143027413587603,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9914250.0
+                    },
+                    {
+                        "timestamp": "20250715092000",
+                        "price": 40600.0,
+                        "rsi": 25.4982465144128,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9963250.0
+                    },
+                    {
+                        "timestamp": "20250715093000",
+                        "price": 41150.0,
+                        "rsi": 37.84274868664466,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10098000.0
+                    },
+                    {
+                        "timestamp": "20250715094000",
+                        "price": 41250.0,
+                        "rsi": 39.7959838904083,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10122500.0
+                    },
+                    {
+                        "timestamp": "20250715095000",
+                        "price": 41050.0,
+                        "rsi": 37.27323236289364,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10073500.0
+                    },
+                    {
+                        "timestamp": "20250715100000",
+                        "price": 40800.0,
+                        "rsi": 34.342589068980786,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10012250.0
+                    },
+                    {
+                        "timestamp": "20250715101000",
+                        "price": 40650.0,
+                        "rsi": 32.682188153973314,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9975500.0
+                    },
+                    {
+                        "timestamp": "20250715102000",
+                        "price": 41350.0,
+                        "rsi": 45.84161807552233,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10147000.0
+                    },
+                    {
+                        "timestamp": "20250715103000",
+                        "price": 41550.0,
+                        "rsi": 48.9143364843537,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10196000.0
+                    },
+                    {
+                        "timestamp": "20250715104000",
+                        "price": 41150.0,
+                        "rsi": 43.58788957328639,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10098000.0
+                    },
+                    {
+                        "timestamp": "20250715105000",
+                        "price": 40950.0,
+                        "rsi": 41.17367558474522,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10049000.0
+                    },
+                    {
+                        "timestamp": "20250715110000",
+                        "price": 41150.0,
+                        "rsi": 44.48502314236742,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10098000.0
+                    },
+                    {
+                        "timestamp": "20250715111000",
+                        "price": 41100.0,
+                        "rsi": 43.8209144253531,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10085750.0
+                    },
+                    {
+                        "timestamp": "20250715112000",
+                        "price": 41350.0,
+                        "rsi": 48.0009097244779,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10147000.0
+                    },
+                    {
+                        "timestamp": "20250715113000",
+                        "price": 41200.0,
+                        "rsi": 45.79903121523193,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10110250.0
+                    },
+                    {
+                        "timestamp": "20250715114000",
+                        "price": 41100.0,
+                        "rsi": 44.338801251053965,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10085750.0
+                    },
+                    {
+                        "timestamp": "20250715115000",
+                        "price": 41000.0,
+                        "rsi": 42.866922768494156,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10061250.0
+                    },
+                    {
+                        "timestamp": "20250715120000",
+                        "price": 41150.0,
+                        "rsi": 45.774730396369065,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10098000.0
+                    },
+                    {
+                        "timestamp": "20250715121000",
+                        "price": 40900.0,
+                        "rsi": 41.9431937399264,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10036750.0
+                    },
+                    {
+                        "timestamp": "20250715122000",
+                        "price": 40950.0,
+                        "rsi": 42.97134031578766,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10049000.0
+                    },
+                    {
+                        "timestamp": "20250715123000",
+                        "price": 41600.0,
+                        "rsi": 54.30141307868236,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10208250.0
+                    },
+                    {
+                        "timestamp": "20250715124000",
+                        "price": 41000.0,
+                        "rsi": 45.34573357007343,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10061250.0
+                    },
+                    {
+                        "timestamp": "20250715125000",
+                        "price": 41000.0,
+                        "rsi": 45.34573357007343,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10061250.0
+                    },
+                    {
+                        "timestamp": "20250715130000",
+                        "price": 41050.0,
+                        "rsi": 46.20322885957598,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10073500.0
+                    },
+                    {
+                        "timestamp": "20250715131000",
+                        "price": 40950.0,
+                        "rsi": 44.69293576816708,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10049000.0
+                    },
+                    {
+                        "timestamp": "20250715132000",
+                        "price": 40850.0,
+                        "rsi": 43.173133246847335,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10024500.0
+                    },
+                    {
+                        "timestamp": "20250715133000",
+                        "price": 41200.0,
+                        "rsi": 49.62935603246796,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10110250.0
+                    },
+                    {
+                        "timestamp": "20250715134000",
+                        "price": 41900.0,
+                        "rsi": 59.53200096035475,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10281750.0
+                    },
+                    {
+                        "timestamp": "20250715135000",
+                        "price": 41500.0,
+                        "rsi": 53.10701437628811,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10183750.0
+                    },
+                    {
+                        "timestamp": "20250715140000",
+                        "price": 41150.0,
+                        "rsi": 48.20467225837577,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10098000.0
+                    },
+                    {
+                        "timestamp": "20250715141000",
+                        "price": 41150.0,
+                        "rsi": 48.20467225837577,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10098000.0
+                    },
+                    {
+                        "timestamp": "20250715142000",
+                        "price": 40950.0,
+                        "rsi": 45.42569719898065,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10049000.0
+                    },
+                    {
+                        "timestamp": "20250715143000",
+                        "price": 41000.0,
+                        "rsi": 46.25979982120329,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10061250.0
+                    },
+                    {
+                        "timestamp": "20250715144000",
+                        "price": 40900.0,
+                        "rsi": 44.78550794130346,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 10036750.0
+                    },
+                    {
+                        "timestamp": "20250715145000",
+                        "price": 40150.0,
+                        "rsi": 35.61726288549322,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9853000.0
+                    },
+                    {
+                        "timestamp": "20250715150000",
+                        "price": 40050.0,
+                        "rsi": 34.600193330848526,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9828500.0
+                    },
+                    {
+                        "timestamp": "20250715151000",
+                        "price": 39800.0,
+                        "rsi": 32.13002859979153,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9767250.0
+                    },
+                    {
+                        "timestamp": "20250715153000",
+                        "price": 40050.0,
+                        "rsi": 36.975556453777834,
+                        "capital": 16250.0,
+                        "shares": 245.0,
+                        "portfolio_value": 9828500.0
+                    }
+                ]
+            },
+            "all_simulations": [
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250715",
+                    "initial_capital": 10000000,
+                    "final_value": 9828500.0,
+                    "profit": -171500.0,
+                    "profit_rate": -1.7149999999999999,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 40750.0,
+                    "avg_sell_price": 40050.0,
+                    "trade_details": [
+                        {
+                            "time": "20250715090000",
+                            "action": "매수",
+                            "price": "40,750.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,983,750.0원",
+                            "rsi": "22.81",
+                            "remaining_capital": "16,250.0원",
+                            "total_shares": "245.0주"
+                        },
+                        {
+                            "time": "20250715153000",
+                            "action": "청산매도",
+                            "price": "40,050.0원",
+                            "quantity": "245.0주",
+                            "amount": "9,812,250.0원",
+                            "rsi": "36.98",
+                            "remaining_capital": "9,828,500.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "20250716",
+            "best_result": {
+                "stock_code": "294570",
+                "date": "20250716",
+                "initial_capital": 10000000,
+                "final_value": 12843550.0,
+                "profit": 2843550.0,
+                "profit_rate": 28.4355,
+                "rsi_oversold": 25,
+                "rsi_overbought": 75,
+                "total_trades": 2,
+                "buy_trades": 1,
+                "sell_trades": 1,
+                "avg_buy_price": 37450.0,
+                "avg_sell_price": 48100.0,
+                "trades": [
+                    {
+                        "timestamp": "20250716090000",
+                        "action": "BUY",
+                        "price": 37450.0,
+                        "shares": 267.0,
+                        "cost": 9999150.0,
+                        "rsi": 15.0,
+                        "capital": 850.0,
+                        "shares_held": 267.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250716113000",
+                        "action": "SELL",
+                        "price": 48100.0,
+                        "shares": 267.0,
+                        "revenue": 12842700.0,
+                        "rsi": 78.52559476178565,
+                        "capital": 12843550.0,
+                        "shares_held": 0,
+                        "portfolio_value": 12843550.0
+                    }
+                ],
+                "trade_details": [
+                    {
+                        "time": "20250716090000",
+                        "action": "매수",
+                        "price": "37,450.0원",
+                        "quantity": "267.0주",
+                        "amount": "9,999,150.0원",
+                        "rsi": "15.00",
+                        "remaining_capital": "850.0원",
+                        "total_shares": "267.0주"
+                    },
+                    {
+                        "time": "20250716113000",
+                        "action": "매도",
+                        "price": "48,100.0원",
+                        "quantity": "267.0주",
+                        "amount": "12,842,700.0원",
+                        "rsi": "78.53",
+                        "remaining_capital": "12,843,550.0원",
+                        "total_shares": "0주"
+                    }
+                ],
+                "portfolio_values": [
+                    {
+                        "timestamp": "20250716090000",
+                        "price": 37450.0,
+                        "rsi": 15.0,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250716091000",
+                        "price": 38250.0,
+                        "rsi": 22.943735844558347,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10213600.0
+                    },
+                    {
+                        "timestamp": "20250716092000",
+                        "price": 38400.0,
+                        "rsi": 24.370922017729384,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10253650.0
+                    },
+                    {
+                        "timestamp": "20250716093000",
+                        "price": 38550.0,
+                        "rsi": 25.849924693224153,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10293700.0
+                    },
+                    {
+                        "timestamp": "20250716094000",
+                        "price": 38550.0,
+                        "rsi": 25.849924693224153,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10293700.0
+                    },
+                    {
+                        "timestamp": "20250716095000",
+                        "price": 39900.0,
+                        "rsi": 38.41985181302076,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10654150.0
+                    },
+                    {
+                        "timestamp": "20250716100000",
+                        "price": 39900.0,
+                        "rsi": 38.41985181302076,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10654150.0
+                    },
+                    {
+                        "timestamp": "20250716101000",
+                        "price": 39950.0,
+                        "rsi": 38.865012285899525,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10667500.0
+                    },
+                    {
+                        "timestamp": "20250716102000",
+                        "price": 40000.0,
+                        "rsi": 39.33727371083157,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10680850.0
+                    },
+                    {
+                        "timestamp": "20250716103000",
+                        "price": 40250.0,
+                        "rsi": 41.759809053725235,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10747600.0
+                    },
+                    {
+                        "timestamp": "20250716104000",
+                        "price": 40100.0,
+                        "rsi": 40.709351955275764,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10707550.0
+                    },
+                    {
+                        "timestamp": "20250716105000",
+                        "price": 40100.0,
+                        "rsi": 40.709351955275764,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10707550.0
+                    },
+                    {
+                        "timestamp": "20250716110000",
+                        "price": 40200.0,
+                        "rsi": 41.84049779956785,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 10734250.0
+                    },
+                    {
+                        "timestamp": "20250716111000",
+                        "price": 44700.0,
+                        "rsi": 69.78018051870411,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 11935750.0
+                    },
+                    {
+                        "timestamp": "20250716112000",
+                        "price": 46250.0,
+                        "rsi": 74.35083050197218,
+                        "capital": 850.0,
+                        "shares": 267.0,
+                        "portfolio_value": 12349600.0
+                    },
+                    {
+                        "timestamp": "20250716113000",
+                        "price": 48100.0,
+                        "rsi": 78.52559476178565,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716114000",
+                        "price": 49300.0,
+                        "rsi": 80.71792791934273,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716115000",
+                        "price": 48975.0,
+                        "rsi": 78.38393638772857,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716120000",
+                        "price": 49050.0,
+                        "rsi": 78.53816279906577,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716121000",
+                        "price": 50800.0,
+                        "rsi": 81.80097280897576,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716122000",
+                        "price": 50300.0,
+                        "rsi": 78.14548435783357,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716123000",
+                        "price": 50100.0,
+                        "rsi": 76.66959169812506,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716124000",
+                        "price": 48800.0,
+                        "rsi": 67.71703901416127,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716125000",
+                        "price": 49300.0,
+                        "rsi": 69.20638548031198,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716130000",
+                        "price": 49050.0,
+                        "rsi": 67.52886995621785,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716131000",
+                        "price": 48650.0,
+                        "rsi": 64.82152083708428,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716132000",
+                        "price": 48550.0,
+                        "rsi": 64.12931371274684,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716133000",
+                        "price": 47800.0,
+                        "rsi": 59.03730304176328,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716134000",
+                        "price": 48700.0,
+                        "rsi": 62.84940426972468,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716135000",
+                        "price": 48100.0,
+                        "rsi": 58.91316354259285,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716140000",
+                        "price": 48600.0,
+                        "rsi": 61.099605381954426,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716141000",
+                        "price": 48100.0,
+                        "rsi": 57.787863015381625,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716142000",
+                        "price": 47800.0,
+                        "rsi": 55.83244018382131,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716143000",
+                        "price": 47450.0,
+                        "rsi": 53.555560464843765,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716144000",
+                        "price": 47800.0,
+                        "rsi": 55.50947555895482,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716145000",
+                        "price": 48850.0,
+                        "rsi": 60.83298872541639,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716150000",
+                        "price": 48200.0,
+                        "rsi": 56.33883991731217,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716151000",
+                        "price": 48550.0,
+                        "rsi": 58.13243881894932,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    },
+                    {
+                        "timestamp": "20250716153000",
+                        "price": 48400.0,
+                        "rsi": 57.05075739623857,
+                        "capital": 12843550.0,
+                        "shares": 0,
+                        "portfolio_value": 12843550.0
+                    }
+                ]
+            },
+            "all_simulations": [
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 11935750.0,
+                    "profit": 1935750.0,
+                    "profit_rate": 19.357499999999998,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 44700.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716111000",
+                            "action": "매도",
+                            "price": "44,700.0원",
+                            "quantity": "267.0주",
+                            "amount": "11,934,900.0원",
+                            "rsi": "69.78",
+                            "remaining_capital": "11,935,750.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 12349600.0,
+                    "profit": 2349600.0,
+                    "profit_rate": 23.496,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 46250.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716112000",
+                            "action": "매도",
+                            "price": "46,250.0원",
+                            "quantity": "267.0주",
+                            "amount": "12,348,750.0원",
+                            "rsi": "74.35",
+                            "remaining_capital": "12,349,600.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 12843550.0,
+                    "profit": 2843550.0,
+                    "profit_rate": 28.4355,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 48100.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716113000",
+                            "action": "매도",
+                            "price": "48,100.0원",
+                            "quantity": "267.0주",
+                            "amount": "12,842,700.0원",
+                            "rsi": "78.53",
+                            "remaining_capital": "12,843,550.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 11935750.0,
+                    "profit": 1935750.0,
+                    "profit_rate": 19.357499999999998,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 44700.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716111000",
+                            "action": "매도",
+                            "price": "44,700.0원",
+                            "quantity": "267.0주",
+                            "amount": "11,934,900.0원",
+                            "rsi": "69.78",
+                            "remaining_capital": "11,935,750.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 12349600.0,
+                    "profit": 2349600.0,
+                    "profit_rate": 23.496,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 46250.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716112000",
+                            "action": "매도",
+                            "price": "46,250.0원",
+                            "quantity": "267.0주",
+                            "amount": "12,348,750.0원",
+                            "rsi": "74.35",
+                            "remaining_capital": "12,349,600.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 12843550.0,
+                    "profit": 2843550.0,
+                    "profit_rate": 28.4355,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 48100.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716113000",
+                            "action": "매도",
+                            "price": "48,100.0원",
+                            "quantity": "267.0주",
+                            "amount": "12,842,700.0원",
+                            "rsi": "78.53",
+                            "remaining_capital": "12,843,550.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 11935750.0,
+                    "profit": 1935750.0,
+                    "profit_rate": 19.357499999999998,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 65,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 44700.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716111000",
+                            "action": "매도",
+                            "price": "44,700.0원",
+                            "quantity": "267.0주",
+                            "amount": "11,934,900.0원",
+                            "rsi": "69.78",
+                            "remaining_capital": "11,935,750.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 12349600.0,
+                    "profit": 2349600.0,
+                    "profit_rate": 23.496,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 70,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 46250.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716112000",
+                            "action": "매도",
+                            "price": "46,250.0원",
+                            "quantity": "267.0주",
+                            "amount": "12,348,750.0원",
+                            "rsi": "74.35",
+                            "remaining_capital": "12,349,600.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250716",
+                    "initial_capital": 10000000,
+                    "final_value": 12843550.0,
+                    "profit": 2843550.0,
+                    "profit_rate": 28.4355,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 75,
+                    "total_trades": 2,
+                    "buy_trades": 1,
+                    "sell_trades": 1,
+                    "avg_buy_price": 37450.0,
+                    "avg_sell_price": 48100.0,
+                    "trade_details": [
+                        {
+                            "time": "20250716090000",
+                            "action": "매수",
+                            "price": "37,450.0원",
+                            "quantity": "267.0주",
+                            "amount": "9,999,150.0원",
+                            "rsi": "15.00",
+                            "remaining_capital": "850.0원",
+                            "total_shares": "267.0주"
+                        },
+                        {
+                            "time": "20250716113000",
+                            "action": "매도",
+                            "price": "48,100.0원",
+                            "quantity": "267.0주",
+                            "amount": "12,842,700.0원",
+                            "rsi": "78.53",
+                            "remaining_capital": "12,843,550.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "20250717",
+            "best_result": {
+                "stock_code": "294570",
+                "date": "20250717",
+                "initial_capital": 10000000,
+                "final_value": 10000000,
+                "profit": 0,
+                "profit_rate": 0.0,
+                "rsi_oversold": 25,
+                "rsi_overbought": 65,
+                "total_trades": 0,
+                "buy_trades": 0,
+                "sell_trades": 0,
+                "avg_buy_price": 0,
+                "avg_sell_price": 0,
+                "trades": [],
+                "trade_details": [],
+                "portfolio_values": [
+                    {
+                        "timestamp": "20250717090000",
+                        "price": 48800.0,
+                        "rsi": 53.934340802501296,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717091000",
+                        "price": 49850.0,
+                        "rsi": 60.45831469566115,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717092000",
+                        "price": 48500.0,
+                        "rsi": 50.54646199328623,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717093000",
+                        "price": 48850.0,
+                        "rsi": 52.711060414216,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717094000",
+                        "price": 49300.0,
+                        "rsi": 55.413244860569286,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717095000",
+                        "price": 49400.0,
+                        "rsi": 56.014743586917675,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717100000",
+                        "price": 49650.0,
+                        "rsi": 57.556325178111045,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717101000",
+                        "price": 49300.0,
+                        "rsi": 54.66762597919785,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717102000",
+                        "price": 48700.0,
+                        "rsi": 50.031837555530736,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717103000",
+                        "price": 49000.0,
+                        "rsi": 52.21381587987163,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717104000",
+                        "price": 49350.0,
+                        "rsi": 54.699204767038026,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717105000",
+                        "price": 48850.0,
+                        "rsi": 50.6466458947401,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717110000",
+                        "price": 48950.0,
+                        "rsi": 51.42182875332884,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717111000",
+                        "price": 48150.0,
+                        "rsi": 45.29280411732553,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717112000",
+                        "price": 49050.0,
+                        "rsi": 52.19593188492362,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717113000",
+                        "price": 49200.0,
+                        "rsi": 53.25463322207498,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717114000",
+                        "price": 49050.0,
+                        "rsi": 52.014083323746895,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717115000",
+                        "price": 48750.0,
+                        "rsi": 49.529053815771604,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717120000",
+                        "price": 48700.0,
+                        "rsi": 49.10794359499472,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717121000",
+                        "price": 48750.0,
+                        "rsi": 49.56969900719694,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717122000",
+                        "price": 48550.0,
+                        "rsi": 47.70515771663368,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717123000",
+                        "price": 48400.0,
+                        "rsi": 46.298562370762205,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717124000",
+                        "price": 48450.0,
+                        "rsi": 46.86100804419653,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717125000",
+                        "price": 48500.0,
+                        "rsi": 47.45368982424178,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717130000",
+                        "price": 48500.0,
+                        "rsi": 47.453689824241785,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717131000",
+                        "price": 48300.0,
+                        "rsi": 45.119164077940006,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717132000",
+                        "price": 48250.0,
+                        "rsi": 44.52937064871421,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717133000",
+                        "price": 49000.0,
+                        "rsi": 54.200470070242616,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717134000",
+                        "price": 49450.0,
+                        "rsi": 58.837601078232915,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717135000",
+                        "price": 48700.0,
+                        "rsi": 49.7894629837916,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717140000",
+                        "price": 49200.0,
+                        "rsi": 54.781873109870055,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717141000",
+                        "price": 49100.0,
+                        "rsi": 53.63328461172404,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717142000",
+                        "price": 49100.0,
+                        "rsi": 53.63328461172404,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717143000",
+                        "price": 48800.0,
+                        "rsi": 49.98680659607082,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717144000",
+                        "price": 48900.0,
+                        "rsi": 51.17836397918638,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717145000",
+                        "price": 48750.0,
+                        "rsi": 49.28169325843737,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717150000",
+                        "price": 48700.0,
+                        "rsi": 48.63467727644358,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717151000",
+                        "price": 48650.0,
+                        "rsi": 47.95662576412373,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250717153000",
+                        "price": 48800.0,
+                        "rsi": 50.19975387416421,
+                        "capital": 10000000,
+                        "shares": 0,
+                        "portfolio_value": 10000000.0
+                    }
+                ]
+            },
+            "all_simulations": [
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 65,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 70,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250717",
+                    "initial_capital": 10000000,
+                    "final_value": 10000000,
+                    "profit": 0.0,
+                    "profit_rate": 0.0,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 75,
+                    "total_trades": 0,
+                    "buy_trades": 0,
+                    "sell_trades": 0,
+                    "avg_buy_price": 0.0,
+                    "avg_sell_price": 0.0,
+                    "trade_details": []
+                }
+            ]
+        },
+        {
+            "date": "20250718",
+            "best_result": {
+                "stock_code": "294570",
+                "date": "20250718",
+                "initial_capital": 10000000,
+                "final_value": 9687700.0,
+                "profit": -312300.0,
+                "profit_rate": -3.123,
+                "rsi_oversold": 25,
+                "rsi_overbought": 65,
+                "total_trades": 3,
+                "buy_trades": 2,
+                "sell_trades": 1,
+                "avg_buy_price": 45850.0,
+                "avg_sell_price": 44850.0,
+                "trades": [
+                    {
+                        "timestamp": "20250718090000",
+                        "action": "BUY",
+                        "price": 46300.0,
+                        "shares": 215.0,
+                        "cost": 9954500.0,
+                        "rsi": 22.694717994628462,
+                        "capital": 45500.0,
+                        "shares_held": 215.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250718095000",
+                        "action": "BUY",
+                        "price": 45400.0,
+                        "shares": 1.0,
+                        "cost": 45400.0,
+                        "rsi": 24.020387234384486,
+                        "capital": 100.0,
+                        "shares_held": 216.0,
+                        "portfolio_value": 9806500.0
+                    },
+                    {
+                        "timestamp": "20250718153000",
+                        "action": "FINAL_SELL",
+                        "price": 44850.0,
+                        "shares": 216.0,
+                        "revenue": 9687600.0,
+                        "rsi": 43.161294729758396,
+                        "capital": 9687700.0,
+                        "shares_held": 0,
+                        "portfolio_value": 9687700.0
+                    }
+                ],
+                "trade_details": [
+                    {
+                        "time": "20250718090000",
+                        "action": "매수",
+                        "price": "46,300.0원",
+                        "quantity": "215.0주",
+                        "amount": "9,954,500.0원",
+                        "rsi": "22.69",
+                        "remaining_capital": "45,500.0원",
+                        "total_shares": "215.0주"
+                    },
+                    {
+                        "time": "20250718095000",
+                        "action": "매수",
+                        "price": "45,400.0원",
+                        "quantity": "1.0주",
+                        "amount": "45,400.0원",
+                        "rsi": "24.02",
+                        "remaining_capital": "100.0원",
+                        "total_shares": "216.0주"
+                    },
+                    {
+                        "time": "20250718153000",
+                        "action": "청산매도",
+                        "price": "44,850.0원",
+                        "quantity": "216.0주",
+                        "amount": "9,687,600.0원",
+                        "rsi": "43.16",
+                        "remaining_capital": "9,687,700.0원",
+                        "total_shares": "0주"
+                    }
+                ],
+                "portfolio_values": [
+                    {
+                        "timestamp": "20250718090000",
+                        "price": 46300.0,
+                        "rsi": 22.694717994628462,
+                        "capital": 45500.0,
+                        "shares": 215.0,
+                        "portfolio_value": 10000000.0
+                    },
+                    {
+                        "timestamp": "20250718091000",
+                        "price": 45800.0,
+                        "rsi": 21.259918714921625,
+                        "capital": 45500.0,
+                        "shares": 215.0,
+                        "portfolio_value": 9892500.0
+                    },
+                    {
+                        "timestamp": "20250718092000",
+                        "price": 45800.0,
+                        "rsi": 21.259918714921625,
+                        "capital": 45500.0,
+                        "shares": 215.0,
+                        "portfolio_value": 9892500.0
+                    },
+                    {
+                        "timestamp": "20250718093000",
+                        "price": 46400.0,
+                        "rsi": 27.627716290109518,
+                        "capital": 45500.0,
+                        "shares": 215.0,
+                        "portfolio_value": 10021500.0
+                    },
+                    {
+                        "timestamp": "20250718094000",
+                        "price": 45850.0,
+                        "rsi": 25.585144249674272,
+                        "capital": 45500.0,
+                        "shares": 215.0,
+                        "portfolio_value": 9903250.0
+                    },
+                    {
+                        "timestamp": "20250718095000",
+                        "price": 45400.0,
+                        "rsi": 24.020387234384486,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9806500.0
+                    },
+                    {
+                        "timestamp": "20250718100000",
+                        "price": 45300.0,
+                        "rsi": 23.673889166654916,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9784900.0
+                    },
+                    {
+                        "timestamp": "20250718101000",
+                        "price": 45600.0,
+                        "rsi": 27.072624416223974,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9849700.0
+                    },
+                    {
+                        "timestamp": "20250718102000",
+                        "price": 44700.0,
+                        "rsi": 23.667708771606044,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718103000",
+                        "price": 44700.0,
+                        "rsi": 23.667708771606044,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718104000",
+                        "price": 45150.0,
+                        "rsi": 28.856326285435756,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9752500.0
+                    },
+                    {
+                        "timestamp": "20250718105000",
+                        "price": 45200.0,
+                        "rsi": 29.43031546915485,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9763300.0
+                    },
+                    {
+                        "timestamp": "20250718110000",
+                        "price": 44800.0,
+                        "rsi": 27.51759063328251,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9676900.0
+                    },
+                    {
+                        "timestamp": "20250718111000",
+                        "price": 44850.0,
+                        "rsi": 28.14623037525874,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9687700.0
+                    },
+                    {
+                        "timestamp": "20250718112000",
+                        "price": 44700.0,
+                        "rsi": 27.379056804425872,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718113000",
+                        "price": 44700.0,
+                        "rsi": 27.379056804425872,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718114000",
+                        "price": 44700.0,
+                        "rsi": 27.379056804425872,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718115000",
+                        "price": 44500.0,
+                        "rsi": 26.190264287718676,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9612100.0
+                    },
+                    {
+                        "timestamp": "20250718120000",
+                        "price": 44750.0,
+                        "rsi": 30.266184771271526,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9666100.0
+                    },
+                    {
+                        "timestamp": "20250718121000",
+                        "price": 44600.0,
+                        "rsi": 29.22343698030258,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9633700.0
+                    },
+                    {
+                        "timestamp": "20250718122000",
+                        "price": 44600.0,
+                        "rsi": 29.22343698030258,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9633700.0
+                    },
+                    {
+                        "timestamp": "20250718123000",
+                        "price": 44550.0,
+                        "rsi": 28.839327662230986,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9622900.0
+                    },
+                    {
+                        "timestamp": "20250718124000",
+                        "price": 44350.0,
+                        "rsi": 27.293950045259336,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9579700.0
+                    },
+                    {
+                        "timestamp": "20250718125000",
+                        "price": 44550.0,
+                        "rsi": 31.26073842343996,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9622900.0
+                    },
+                    {
+                        "timestamp": "20250718130000",
+                        "price": 44300.0,
+                        "rsi": 29.121877487763413,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9568900.0
+                    },
+                    {
+                        "timestamp": "20250718131000",
+                        "price": 44500.0,
+                        "rsi": 33.06732412876154,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9612100.0
+                    },
+                    {
+                        "timestamp": "20250718132000",
+                        "price": 45700.0,
+                        "rsi": 50.77332272819799,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9871300.0
+                    },
+                    {
+                        "timestamp": "20250718133000",
+                        "price": 45850.0,
+                        "rsi": 52.46602684582508,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9903700.0
+                    },
+                    {
+                        "timestamp": "20250718134000",
+                        "price": 45450.0,
+                        "rsi": 47.75068137541972,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9817300.0
+                    },
+                    {
+                        "timestamp": "20250718135000",
+                        "price": 45300.0,
+                        "rsi": 46.078253860653305,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9784900.0
+                    },
+                    {
+                        "timestamp": "20250718140000",
+                        "price": 44700.0,
+                        "rsi": 40.03764240525043,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718141000",
+                        "price": 44700.0,
+                        "rsi": 40.03764240525043,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718142000",
+                        "price": 44650.0,
+                        "rsi": 39.53671636742559,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9644500.0
+                    },
+                    {
+                        "timestamp": "20250718143000",
+                        "price": 44700.0,
+                        "rsi": 40.34055523363782,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9655300.0
+                    },
+                    {
+                        "timestamp": "20250718144000",
+                        "price": 44950.0,
+                        "rsi": 44.32606499839335,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9709300.0
+                    },
+                    {
+                        "timestamp": "20250718145000",
+                        "price": 44950.0,
+                        "rsi": 44.32606499839335,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9709300.0
+                    },
+                    {
+                        "timestamp": "20250718150000",
+                        "price": 44850.0,
+                        "rsi": 42.99365347464894,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9687700.0
+                    },
+                    {
+                        "timestamp": "20250718151000",
+                        "price": 44900.0,
+                        "rsi": 43.90164956795283,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9698500.0
+                    },
+                    {
+                        "timestamp": "20250718153000",
+                        "price": 44850.0,
+                        "rsi": 43.161294729758396,
+                        "capital": 100.0,
+                        "shares": 216.0,
+                        "portfolio_value": 9687700.0
+                    }
+                ]
+            },
+            "all_simulations": [
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 65,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 70,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 25,
+                    "rsi_overbought": 75,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 65,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 70,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 30,
+                    "rsi_overbought": 75,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 65,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 70,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                },
+                {
+                    "stock_code": "294570",
+                    "date": "20250718",
+                    "initial_capital": 10000000,
+                    "final_value": 9687700.0,
+                    "profit": -312300.0,
+                    "profit_rate": -3.123,
+                    "rsi_oversold": 35,
+                    "rsi_overbought": 75,
+                    "total_trades": 3,
+                    "buy_trades": 2,
+                    "sell_trades": 1,
+                    "avg_buy_price": 45850.0,
+                    "avg_sell_price": 44850.0,
+                    "trade_details": [
+                        {
+                            "time": "20250718090000",
+                            "action": "매수",
+                            "price": "46,300.0원",
+                            "quantity": "215.0주",
+                            "amount": "9,954,500.0원",
+                            "rsi": "22.69",
+                            "remaining_capital": "45,500.0원",
+                            "total_shares": "215.0주"
+                        },
+                        {
+                            "time": "20250718095000",
+                            "action": "매수",
+                            "price": "45,400.0원",
+                            "quantity": "1.0주",
+                            "amount": "45,400.0원",
+                            "rsi": "24.02",
+                            "remaining_capital": "100.0원",
+                            "total_shares": "216.0주"
+                        },
+                        {
+                            "time": "20250718153000",
+                            "action": "청산매도",
+                            "price": "44,850.0원",
+                            "quantity": "216.0주",
+                            "amount": "9,687,600.0원",
+                            "rsi": "43.16",
+                            "remaining_capital": "9,687,700.0원",
+                            "total_shares": "0주"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

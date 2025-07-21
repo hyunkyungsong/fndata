@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀀타매트릭스 (317690) - 일별 시뮬레이션 전체 결과</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .card .label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .best-result {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .best-result h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .best-result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .best-result-item {
+            text-align: center;
+        }
+        
+        .best-result-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .best-result-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .results-table th,
+        .results-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .results-table th {
+            background-color: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .results-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .results-table tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .profit-positive {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .profit-negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .profit-neutral {
+            color: #6c757d;
+            font-weight: bold;
+        }
+        
+        .trading-day {
+            background-color: #e8f5e8;
+        }
+        
+        .non-trading-day {
+            background-color: #f8f9fa;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>퀀타매트릭스 (317690)</h1>
+            <p>일별 시뮬레이션 전체 결과</p>
+            <p>시뮬레이션 기간: 20250711 ~ 20250718</p>
+            <a href="all_stocks_simulation_report.html" class="back-button">← 전체 결과로 돌아가기</a>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="card">
+                <h3>최고 수익</h3>
+                <div class="value">3,357,200원</div>
+                <div class="label">최적 설정 기준</div>
+            </div>
+            <div class="card">
+                <h3>최고 수익률</h3>
+                <div class="value">33.57%</div>
+                <div class="label">최적 설정 기준</div>
+            </div>
+            <div class="card">
+                <h3>총 분석일</h3>
+                <div class="value">6일</div>
+                <div class="label">전체 시뮬레이션 기간</div>
+            </div>
+            <div class="card">
+                <h3>거래 발생일</h3>
+                <div class="value">3일</div>
+                <div class="label">매매가 발생한 일자</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>최적 성과 상세</h2>
+            <div class="best-result">
+                <h3>최고 수익 달성일: 20250716</h3>
+                <div class="best-result-grid">
+                    <div class="best-result-item">
+                        <div class="best-result-value">3,357,200원</div>
+                        <div class="best-result-label">수익</div>
+                    </div>
+                    <div class="best-result-item">
+                        <div class="best-result-value">33.57%</div>
+                        <div class="best-result-label">수익률</div>
+                    </div>
+                    <div class="best-result-item">
+                        <div class="best-result-value">2</div>
+                        <div class="best-result-label">총 매매</div>
+                    </div>
+                    <div class="best-result-item">
+                        <div class="best-result-value">1</div>
+                        <div class="best-result-label">매수</div>
+                    </div>
+                    <div class="best-result-item">
+                        <div class="best-result-value">1</div>
+                        <div class="best-result-label">매도</div>
+                    </div>
+                    <div class="best-result-item">
+                        <div class="best-result-value">35 / 74</div>
+                        <div class="best-result-label">RSI 설정</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>전체 기간 통계</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">수익일</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">손실일</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">무손익일</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3,625,650원</div>
+                    <div class="stat-label">전체 기간 총 수익</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">6.04%</div>
+                    <div class="stat-label">전체 기간 평균 수익률</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">전체 기간 총 매매</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>거래일 통계</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">거래 발생일</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3,625,650원</div>
+                    <div class="stat-label">거래일 총 수익</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">12.09%</div>
+                    <div class="stat-label">거래일 평균 수익률</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">총 매매횟수</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">총 매수횟수</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">총 매도횟수</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>일별 시뮬레이션 전체 결과</h2>
+            <div class="note">
+                <strong>💡 참고:</strong> 
+                • <span style="background-color: #e8f5e8; padding: 2px 6px; border-radius: 3px;">연한 녹색</span> = 거래가 발생한 일자<br>
+                • <span style="background-color: #f8f9fa; padding: 2px 6px; border-radius: 3px;">회색</span> = 거래가 발생하지 않은 일자
+            </div>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                        <th>거래 상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr class="trading-day">
+                        <td>20250711</td>
+                        <td>34</td>
+                        <td>65</td>
+                        <td class="profit-positive">29,890원</td>
+                        <td class="profit-positive">0.30%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>거래 발생</td>
+                    </tr>
+
+                    <tr class="non-trading-day">
+                        <td>20250714</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>거래 없음</td>
+                    </tr>
+
+                    <tr class="non-trading-day">
+                        <td>20250715</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>거래 없음</td>
+                    </tr>
+
+                    <tr class="trading-day">
+                        <td>20250716</td>
+                        <td>35</td>
+                        <td>74</td>
+                        <td class="profit-positive">3,357,200원</td>
+                        <td class="profit-positive">33.57%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>거래 발생</td>
+                    </tr>
+
+                    <tr class="non-trading-day">
+                        <td>20250717</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>거래 없음</td>
+                    </tr>
+
+                    <tr class="trading-day">
+                        <td>20250718</td>
+                        <td>29</td>
+                        <td>65</td>
+                        <td class="profit-positive">238,560원</td>
+                        <td class="profit-positive">2.39%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>거래 발생</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 RSI 시뮬레이션 분석 시스템</p>
+            <p>이 보고서는 자동으로 생성되었습니다.</p>
+        </div>
+    </div>
+</body>
+</html>

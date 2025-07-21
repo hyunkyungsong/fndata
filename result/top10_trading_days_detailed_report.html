@@ -1,0 +1,1109 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상위 10개 종목 거래일 상세 분석 보고서</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .stock-section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .stock-header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .stock-header h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .stock-header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .trading-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .summary-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .summary-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .trading-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .trading-table th,
+        .trading-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .trading-table th {
+            background-color: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .trading-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .trading-table tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .profit-positive {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .profit-negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .profit-neutral {
+            color: #6c757d;
+            font-weight: bold;
+        }
+        
+        .no-trading {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .trading-summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>상위 10개 종목 거래일 상세 분석</h1>
+            <p>시뮬레이션 기간: 20250711 ~ 20250718</p>
+            <p>생성일: 2025년 07월 20일 11:46:08</p>
+            <a href="all_stocks_simulation_report.html" class="back-button">← 전체 결과로 돌아가기</a>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>1. 퀀타매트릭스 (317690)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3,625,650원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">12.09%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">6</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250711</td>
+                        <td>34</td>
+                        <td>65</td>
+                        <td class="profit-positive">29,890원</td>
+                        <td class="profit-positive">0.30%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250716</td>
+                        <td>35</td>
+                        <td>74</td>
+                        <td class="profit-positive">3,357,200원</td>
+                        <td class="profit-positive">33.57%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>29</td>
+                        <td>65</td>
+                        <td class="profit-positive">238,560원</td>
+                        <td class="profit-positive">2.39%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>2. 쿠콘 (294570)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">4</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3,321,150원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">8.30%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">9</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">4</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250714</td>
+                        <td>32</td>
+                        <td>67</td>
+                        <td class="profit-positive">961,400원</td>
+                        <td class="profit-positive">9.61%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-171,500원</td>
+                        <td class="profit-negative">-1.71%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250716</td>
+                        <td>25</td>
+                        <td>75</td>
+                        <td class="profit-positive">2,843,550원</td>
+                        <td class="profit-positive">28.44%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-312,300원</td>
+                        <td class="profit-negative">-3.12%</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>3. 도부 (227420)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">2</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,299,773원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">11.50%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">4</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250717</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-76,923원</td>
+                        <td class="profit-negative">-0.77%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-positive">2,376,696원</td>
+                        <td class="profit-positive">23.77%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>4. 지앤이헬스케어 (299480)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">1</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,261,440원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">22.61%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">1</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">1</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250714</td>
+                        <td>35</td>
+                        <td>65</td>
+                        <td class="profit-positive">2,261,440원</td>
+                        <td class="profit-positive">22.61%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>5. 유니온바이오메트릭스 (203450)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,354,365원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">4.71%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">10</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250711</td>
+                        <td>33</td>
+                        <td>65</td>
+                        <td class="profit-positive">58,120원</td>
+                        <td class="profit-positive">0.58%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250714</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-43,920원</td>
+                        <td class="profit-negative">-0.44%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>33</td>
+                        <td>72</td>
+                        <td class="profit-positive">331,320원</td>
+                        <td class="profit-positive">3.31%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250717</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-positive">2,189,025원</td>
+                        <td class="profit-positive">21.89%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-180,180원</td>
+                        <td class="profit-negative">-1.80%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>6. KCTC (009070)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,546,040원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">8.49%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">6</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250714</td>
+                        <td>25</td>
+                        <td>74</td>
+                        <td class="profit-positive">2,151,020원</td>
+                        <td class="profit-positive">21.51%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>26</td>
+                        <td>65</td>
+                        <td class="profit-positive">43,020원</td>
+                        <td class="profit-positive">0.43%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>33</td>
+                        <td>65</td>
+                        <td class="profit-positive">352,000원</td>
+                        <td class="profit-positive">3.52%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>7. 에스폴리텍 (050760)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">4</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,020,947원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5.05%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">8</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">4</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">4</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250711</td>
+                        <td>33</td>
+                        <td>65</td>
+                        <td class="profit-positive">19,932원</td>
+                        <td class="profit-positive">0.20%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-53,328원</td>
+                        <td class="profit-negative">-0.53%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250716</td>
+                        <td>31</td>
+                        <td>65</td>
+                        <td class="profit-positive">2,149,998원</td>
+                        <td class="profit-positive">21.50%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-95,655원</td>
+                        <td class="profit-negative">-0.96%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>8. 그래디언트 (035080)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,411,660원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">4.82%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">10</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250711</td>
+                        <td>35</td>
+                        <td>65</td>
+                        <td class="profit-positive">1,933,800원</td>
+                        <td class="profit-positive">19.34%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>28</td>
+                        <td>65</td>
+                        <td class="profit-positive">148,810원</td>
+                        <td class="profit-positive">1.49%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250716</td>
+                        <td>30</td>
+                        <td>65</td>
+                        <td class="profit-positive">252,330원</td>
+                        <td class="profit-positive">2.52%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250717</td>
+                        <td>30</td>
+                        <td>65</td>
+                        <td class="profit-positive">128,000원</td>
+                        <td class="profit-positive">1.28%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-51,280원</td>
+                        <td class="profit-negative">-0.51%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>9. 헥토파이낸셜 (234340)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">2,940,700원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5.88%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">10</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250711</td>
+                        <td>25</td>
+                        <td>66</td>
+                        <td class="profit-positive">734,000원</td>
+                        <td class="profit-positive">7.34%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250714</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-positive">146,000원</td>
+                        <td class="profit-positive">1.46%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-56,700원</td>
+                        <td class="profit-negative">-0.57%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250716</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-positive">1,909,500원</td>
+                        <td class="profit-positive">19.10%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250717</td>
+                        <td>35</td>
+                        <td>65</td>
+                        <td class="profit-positive">207,900원</td>
+                        <td class="profit-positive">2.08%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stock-section">
+            <div class="stock-header">
+                <h2>10. 인터지스 (129260)</h2>
+                <p>거래가 발생한 일자의 모든 시뮬레이션 결과</p>
+            </div>
+            
+            <div class="trading-summary">
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">거래일 수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">1,783,740원</div>
+                    <div class="summary-label">총 수익</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">5.95%</div>
+                    <div class="summary-label">평균 수익률</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">6</div>
+                    <div class="summary-label">총 매매횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">총 매수횟수</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">3</div>
+                    <div class="summary-label">총 매도횟수</div>
+                </div>
+            </div>
+            
+            <table class="trading-table">
+                <thead>
+                    <tr>
+                        <th>날짜</th>
+                        <th>과매도</th>
+                        <th>과매수</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>총 매매</th>
+                        <th>매수</th>
+                        <th>매도</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>20250715</td>
+                        <td>26</td>
+                        <td>65</td>
+                        <td class="profit-positive">1,884,575원</td>
+                        <td class="profit-positive">18.85%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250717</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-negative">-132,525원</td>
+                        <td class="profit-negative">-1.33%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                    <tr>
+                        <td>20250718</td>
+                        <td>25</td>
+                        <td>65</td>
+                        <td class="profit-positive">31,690원</td>
+                        <td class="profit-positive">0.32%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 RSI 시뮬레이션 분석 시스템</p>
+            <p>이 보고서는 자동으로 생성되었습니다.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSI 기반 매매 시뮬레이션 결과 보고서</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .card .label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .results-table th,
+        .results-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .results-table th {
+            background-color: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .results-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .results-table tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .profit-positive {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .profit-negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .profit-neutral {
+            color: #6c757d;
+            font-weight: bold;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .chart-placeholder {
+            height: 400px;
+            background: linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+                        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .results-table {
+                font-size: 0.9em;
+            }
+            
+            .results-table th,
+            .results-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 RSI 기반 매매 시뮬레이션 결과</h1>
+            <p>전체 종목 RSI 매매 전략 시뮬레이션 분석 보고서</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="card">
+                <h3>📈 총 처리 종목</h3>
+                <div class="value" id="total-stocks">-</div>
+                <div class="label">전체 종목 수</div>
+            </div>
+            <div class="card">
+                <h3>✅ 성공 종목</h3>
+                <div class="value" id="successful-stocks">-</div>
+                <div class="label">성공적으로 분석된 종목</div>
+            </div>
+            <div class="card">
+                <h3>❌ 실패 종목</h3>
+                <div class="value" id="failed-stocks">-</div>
+                <div class="label">분석 실패한 종목</div>
+            </div>
+            <div class="card">
+                <h3>📅 시뮬레이션 기간</h3>
+                <div class="value" id="simulation-period">-</div>
+                <div class="label">분석 기간</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🏆 상위 성과 종목</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="best-profit-rate">-</div>
+                    <div class="stat-label">최고 수익률</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="avg-profit-rate">-</div>
+                    <div class="stat-label">평균 수익률</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="total-trades">-</div>
+                    <div class="stat-label">총 거래 횟수</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="success-rate">-</div>
+                    <div class="stat-label">성공률</div>
+                </div>
+            </div>
+            
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>종목코드</th>
+                        <th>종목명</th>
+                        <th>수익률</th>
+                        <th>수익금</th>
+                        <th>거래횟수</th>
+                        <th>최적 기준</th>
+                        <th>날짜</th>
+                    </tr>
+                </thead>
+                <tbody id="top-results">
+                    <!-- 결과가 여기에 동적으로 추가됩니다 -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>📊 RSI 전략 분석</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="avg-oversold">-</div>
+                    <div class="stat-label">평균 과매도 기준</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="avg-overbought">-</div>
+                    <div class="stat-label">평균 과매수 기준</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="profitable-trades">-</div>
+                    <div class="stat-label">수익 거래 비율</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="avg-trade-count">-</div>
+                    <div class="stat-label">평균 거래 횟수</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📈 시각화 차트</h2>
+            <div class="chart-container">
+                <div class="chart-placeholder">
+                    📊 차트 데이터 로딩 중...
+                    <br>
+                    <small>실제 데이터가 연결되면 인터랙티브 차트가 표시됩니다.</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 상세 분석 결과</h2>
+            <div id="detailed-results">
+                <!-- 상세 결과가 여기에 동적으로 추가됩니다 -->
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📅 생성일시: <span id="generation-time">-</span></p>
+            <p>📊 RSI 기반 매매 시뮬레이션 결과 보고서</p>
+        </div>
+    </div>
+
+    <script>
+        // 샘플 데이터 (실제로는 JSON 파일에서 로드)
+        const sampleData = {
+            simulation_period: {
+                start_date: "20250711",
+                end_date: "20250718"
+            },
+            summary: {
+                total_stocks: 100,
+                successful_stocks: 85,
+                failed_stocks: 15
+            },
+            results: [
+                {
+                    stock_code: "005930",
+                    stock_name: "삼성전자",
+                    best_result: {
+                        date: "20250715",
+                        oversold: 30,
+                        overbought: 70,
+                        profit_rate: 12.5,
+                        profit: 1250000,
+                        total_trades: 8,
+                        buy_trades: 4,
+                        sell_trades: 4
+                    }
+                },
+                {
+                    stock_code: "000660",
+                    stock_name: "SK하이닉스",
+                    best_result: {
+                        date: "20250716",
+                        oversold: 28,
+                        overbought: 72,
+                        profit_rate: 8.3,
+                        profit: 830000,
+                        total_trades: 6,
+                        buy_trades: 3,
+                        sell_trades: 3
+                    }
+                },
+                {
+                    stock_code: "035420",
+                    stock_name: "NAVER",
+                    best_result: {
+                        date: "20250717",
+                        oversold: 32,
+                        overbought: 68,
+                        profit_rate: 6.7,
+                        profit: 670000,
+                        total_trades: 5,
+                        buy_trades: 3,
+                        sell_trades: 2
+                    }
+                }
+            ]
+        };
+
+        // 페이지 로드 시 데이터 표시
+        document.addEventListener('DOMContentLoaded', function() {
+            displayResults(sampleData);
+        });
+
+        function displayResults(data) {
+            // 요약 정보 표시
+            document.getElementById('total-stocks').textContent = data.summary.total_stocks;
+            document.getElementById('successful-stocks').textContent = data.summary.successful_stocks;
+            document.getElementById('failed-stocks').textContent = data.summary.failed_stocks;
+            document.getElementById('simulation-period').textContent = 
+                `${data.simulation_period.start_date} ~ ${data.simulation_period.end_date}`;
+
+            // 상위 결과 표시
+            const topResults = data.results.slice(0, 20);
+            const tbody = document.getElementById('top-results');
+            
+            topResults.forEach((result, index) => {
+                const row = document.createElement('tr');
+                const profitClass = result.best_result.profit_rate > 0 ? 'profit-positive' : 
+                                  result.best_result.profit_rate < 0 ? 'profit-negative' : 'profit-neutral';
+                
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${result.stock_code}</td>
+                    <td>${result.stock_name}</td>
+                    <td class="${profitClass}">${result.best_result.profit_rate.toFixed(2)}%</td>
+                    <td>${result.best_result.profit.toLocaleString()}원</td>
+                    <td>${result.best_result.total_trades}회</td>
+                    <td>${result.best_result.oversold}/${result.best_result.overbought}</td>
+                    <td>${result.best_result.date}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            // 통계 계산 및 표시
+            const profitRates = data.results.map(r => r.best_result.profit_rate);
+            const bestProfitRate = Math.max(...profitRates);
+            const avgProfitRate = profitRates.reduce((a, b) => a + b, 0) / profitRates.length;
+            const totalTrades = data.results.reduce((sum, r) => sum + r.best_result.total_trades, 0);
+            const successRate = (data.summary.successful_stocks / data.summary.total_stocks * 100);
+
+            document.getElementById('best-profit-rate').textContent = `${bestProfitRate.toFixed(2)}%`;
+            document.getElementById('avg-profit-rate').textContent = `${avgProfitRate.toFixed(2)}%`;
+            document.getElementById('total-trades').textContent = totalTrades;
+            document.getElementById('success-rate').textContent = `${successRate.toFixed(1)}%`;
+
+            // RSI 전략 분석
+            const oversoldValues = data.results.map(r => r.best_result.oversold);
+            const overboughtValues = data.results.map(r => r.best_result.overbought);
+            
+            document.getElementById('avg-oversold').textContent = 
+                (oversoldValues.reduce((a, b) => a + b, 0) / oversoldValues.length).toFixed(1);
+            document.getElementById('avg-overbought').textContent = 
+                (overboughtValues.reduce((a, b) => a + b, 0) / overboughtValues.length).toFixed(1);
+            document.getElementById('profitable-trades').textContent = 
+                `${(profitRates.filter(p => p > 0).length / profitRates.length * 100).toFixed(1)}%`;
+            document.getElementById('avg-trade-count').textContent = 
+                (totalTrades / data.results.length).toFixed(1);
+
+            // 생성 시간 표시
+            document.getElementById('generation-time').textContent = new Date().toLocaleString('ko-KR');
+        }
+    </script>
+</body>
+</html> 

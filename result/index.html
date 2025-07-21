@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSI 분석 결과 대시보드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .stats-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .report-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .report-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .report-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .report-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .report-description {
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .report-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .report-features li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .report-features li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .view-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .view-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: #666;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .footer h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-card {
+                padding: 20px;
+            }
+            
+            .report-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 RSI 분석 결과 대시보드</h1>
+            <p>Relative Strength Index 기반 주식 매매 시뮬레이션 및 분석 결과</p>
+            <p>📅 생성일시: <span id="generation-time">-</span></p>
+        </div>
+        
+        <div class="stats-overview">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-value">4</div>
+                <div class="stat-label">분석 보고서</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value">12</div>
+                <div class="stat-label">개별 종목 분석</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value">14</div>
+                <div class="stat-label">RSI 기간</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-value">실시간</div>
+                <div class="stat-label">데이터 업데이트</div>
+            </div>
+        </div>
+        
+        <div class="reports-grid">
+            <a href="rsi_simulation_results.html" class="report-card">
+                <div class="report-icon">🏆</div>
+                <div class="report-title">전체 종목 시뮬레이션 결과</div>
+                <div class="report-description">
+                    모든 종목에 대한 RSI 기반 매매 시뮬레이션 결과를 종합적으로 분석한 보고서입니다.
+                </div>
+                <ul class="report-features">
+                    <li>상위 성과 종목 순위</li>
+                    <li>전체 종목 통계 분석</li>
+                    <li>RSI 전략 성과 분석</li>
+                    <li>수익률 기반 종목 분류</li>
+                </ul>
+                <div class="view-button">보고서 보기</div>
+            </a>
+            
+            <a href="individual_stock_analysis.html" class="report-card">
+                <div class="report-icon">📈</div>
+                <div class="report-title">개별 종목 상세 분석</div>
+                <div class="report-description">
+                    특정 종목의 RSI 시뮬레이션 결과를 상세하게 분석한 보고서입니다.
+                </div>
+                <ul class="report-features">
+                    <li>종목별 RSI 분석</li>
+                    <li>최적 RSI 기준값 탐색</li>
+                    <li>거래 내역 상세 분석</li>
+                    <li>포트폴리오 가치 변화</li>
+                </ul>
+                <div class="view-button">보고서 보기</div>
+            </a>
+            
+            <a href="rsi_calculation_report.html" class="report-card">
+                <div class="report-icon">📊</div>
+                <div class="report-title">RSI 계산 결과 보고서</div>
+                <div class="report-description">
+                    RSI 계산 과정과 결과를 상세하게 분석한 기술적 보고서입니다.
+                </div>
+                <ul class="report-features">
+                    <li>RSI 계산 방법론</li>
+                    <li>시간별 RSI 값 분석</li>
+                    <li>과매도/과매수 신호 분석</li>
+                    <li>데이터 품질 평가</li>
+                </ul>
+                <div class="view-button">보고서 보기</div>
+            </a>
+            
+            <a href="individual_stock_result/index.html" class="report-card">
+                <div class="report-icon">🎯</div>
+                <div class="report-title">개별 종목 분석 결과</div>
+                <div class="report-description">
+                    각 종목별 상세한 RSI 시뮬레이션 결과와 분석 보고서를 확인할 수 있습니다.
+                </div>
+                <ul class="report-features">
+                    <li>쿠콘 상세 시뮬레이션</li>
+                    <li>퀀타매트릭스 완전 분석</li>
+                    <li>상위 10개 종목 분석</li>
+                    <li>매수/매도 가격 정보</li>
+                </ul>
+                <div class="view-button">개별 종목 보기</div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <h3>📋 프로젝트 정보</h3>
+            <p><strong>프로젝트명:</strong> RSI 기반 주식 매매 시뮬레이션 시스템</p>
+            <p><strong>분석 기간:</strong> 2025년 7월 11일 ~ 2025년 7월 18일</p>
+            <p><strong>분석 종목:</strong> KOSPI 상장 종목 100+개</p>
+            <p><strong>시뮬레이션 방식:</strong> RSI 과매도/과매수 기준 매매</p>
+            <p><strong>초기 자본:</strong> 1,000만원</p>
+            <br>
+            <p><strong>📧 문의:</strong> RSI 분석 시스템 관리자</p>
+            <p><strong>🔄 업데이트:</strong> 실시간 데이터 기반 분석</p>
+        </div>
+    </div>
+
+    <script>
+        // 생성 시간 표시
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('generation-time').textContent = new Date().toLocaleString('ko-KR');
+        });
+    </script>
+</body>
+</html> 
