@@ -1,0 +1,37 @@
+{
+    "stock_code": "318660",
+    "date": "20250714",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": false
+    },
+    "data": [
+        {
+            "localDateTime": "20250714091000",
+            "currentPrice": 2500.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714092000",
+            "currentPrice": 2500.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714094000",
+            "currentPrice": 2500.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714121000",
+            "currentPrice": 2500.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

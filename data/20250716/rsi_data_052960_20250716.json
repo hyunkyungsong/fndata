@@ -1,0 +1,73 @@
+{
+    "stock_code": "052960",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716095000",
+            "currentPrice": 3195.0,
+            "rsi": 50.29736618521665,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716101000",
+            "currentPrice": 3200.0,
+            "rsi": 50.29736618521665,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716105000",
+            "currentPrice": 3200.0,
+            "rsi": 63.60292899506312,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716114000",
+            "currentPrice": 3465.0,
+            "rsi": 63.60292899506312,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716115000",
+            "currentPrice": 3465.0,
+            "rsi": 63.60292899506312,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716122000",
+            "currentPrice": 3465.0,
+            "rsi": 59.126847386909,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716125000",
+            "currentPrice": 3405.0,
+            "rsi": 59.12684738690899,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716131000",
+            "currentPrice": 3405.0,
+            "rsi": 58.72740896147073,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716144000",
+            "currentPrice": 3400.0,
+            "rsi": 60.727441391542555,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716145000",
+            "currentPrice": 3435.0,
+            "rsi": 40.49842136710625,
+            "rsi_period": 14
+        }
+    ]
+}

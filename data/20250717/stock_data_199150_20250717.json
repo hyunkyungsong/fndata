@@ -1,0 +1,38 @@
+{
+    "stock_code": "199150",
+    "date": "20250717",
+    "start_date": "20250717",
+    "end_date": "20250717",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250717090000",
+            "currentPrice": 3300.0,
+            "openPrice": 3300.0,
+            "highPrice": 3300.0,
+            "lowPrice": 3300.0,
+            "accumulatedTradingVolume": 1
+        },
+        {
+            "localDateTime": "20250717113000",
+            "currentPrice": 3250.0,
+            "openPrice": 3250.0,
+            "highPrice": 3250.0,
+            "lowPrice": 3250.0,
+            "accumulatedTradingVolume": 100
+        },
+        {
+            "localDateTime": "20250717114000",
+            "currentPrice": 3245.0,
+            "openPrice": 3010.0,
+            "highPrice": 3245.0,
+            "lowPrice": 3010.0,
+            "accumulatedTradingVolume": 2
+        }
+    ]
+}

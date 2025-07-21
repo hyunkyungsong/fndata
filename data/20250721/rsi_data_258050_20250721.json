@@ -1,0 +1,49 @@
+{
+    "stock_code": "258050",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 6,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721091000",
+            "currentPrice": 850.0,
+            "rsi": 13.721498371335514,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721102000",
+            "currentPrice": 862.0,
+            "rsi": 12.780046674445742,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721115000",
+            "currentPrice": 850.0,
+            "rsi": 12.780046674445742,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721122000",
+            "currentPrice": 850.0,
+            "rsi": 12.780046674445742,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721144000",
+            "currentPrice": 850.0,
+            "rsi": 12.780046674445742,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721145000",
+            "currentPrice": 850.0,
+            "rsi": 12.780046674445742,
+            "rsi_period": 14
+        }
+    ]
+}

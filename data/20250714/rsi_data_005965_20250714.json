@@ -1,0 +1,37 @@
+{
+    "stock_code": "005965",
+    "date": "20250714",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": false
+    },
+    "data": [
+        {
+            "localDateTime": "20250714123000",
+            "currentPrice": 20200.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714130000",
+            "currentPrice": 20200.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714140000",
+            "currentPrice": 20200.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714150000",
+            "currentPrice": 20250.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "stock_code": "116100",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716094000",
+            "currentPrice": 799.0,
+            "rsi": 36.26565224282771,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716100000",
+            "currentPrice": 730.0,
+            "rsi": 43.55028563406443,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716120000",
+            "currentPrice": 784.0,
+            "rsi": 38.777238572207324,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716124000",
+            "currentPrice": 730.0,
+            "rsi": 36.3910153902079,
+            "rsi_period": 14
+        }
+    ]
+}

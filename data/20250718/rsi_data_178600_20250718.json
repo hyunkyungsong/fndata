@@ -1,0 +1,25 @@
+{
+    "stock_code": "178600",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 2,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2185.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718130000",
+            "currentPrice": 2180.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

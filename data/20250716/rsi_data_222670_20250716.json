@@ -1,0 +1,49 @@
+{
+    "stock_code": "222670",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 6,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716090000",
+            "currentPrice": 7150.0,
+            "rsi": 55.55555555555556,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716091000",
+            "currentPrice": 7150.0,
+            "rsi": 49.21374490390215,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716103000",
+            "currentPrice": 7140.0,
+            "rsi": 43.82605226411331,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716104000",
+            "currentPrice": 7130.0,
+            "rsi": 39.20403227356209,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716110000",
+            "currentPrice": 7120.0,
+            "rsi": 39.20403227356208,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716114000",
+            "currentPrice": 7120.0,
+            "rsi": 39.20403227356208,
+            "rsi_period": 14
+        }
+    ]
+}

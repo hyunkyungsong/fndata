@@ -1,0 +1,30 @@
+{
+    "stock_code": "254160",
+    "date": "20250715",
+    "start_date": "20250715",
+    "end_date": "20250715",
+    "data_count": 2,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250715101000",
+            "currentPrice": 2600.0,
+            "openPrice": 2650.0,
+            "highPrice": 2650.0,
+            "lowPrice": 2600.0,
+            "accumulatedTradingVolume": 15
+        },
+        {
+            "localDateTime": "20250715123000",
+            "currentPrice": 2530.0,
+            "openPrice": 2530.0,
+            "highPrice": 2530.0,
+            "lowPrice": 2530.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

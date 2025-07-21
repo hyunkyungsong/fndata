@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전체 주식 RSI 시뮬레이션 결과 보고서 (20250721)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; margin-bottom: 30px; text-align: center; }
+        .summary-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card h3 { color: #667eea; margin-bottom: 15px; font-size: 1.3em; }
+        .card .value { font-size: 2em; font-weight: bold; color: #333; }
+        .card .label { color: #666; font-size: 0.9em; margin-top: 5px; }
+        .section { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .section h2 { color: #333; margin-bottom: 20px; font-size: 1.8em; border-bottom: 3px solid #667eea; padding-bottom: 10px; }
+        .results-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .results-table th, .results-table td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        .results-table th { background-color: #667eea; color: white; font-weight: 600; }
+        .results-table tr:nth-child(even) { background-color: #f8f9fa; }
+        .results-table tr:hover { background-color: #e9ecef; }
+        .profit-positive { color: #28a745; font-weight: bold; }
+        .profit-negative { color: #dc3545; font-weight: bold; }
+        .profit-neutral { color: #6c757d; font-weight: bold; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .stat-item { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+        .stat-value { font-size: 1.5em; font-weight: bold; color: #667eea; }
+        .stat-label { color: #666; font-size: 0.9em; margin-top: 5px; }
+        .footer { text-align: center; padding: 20px; color: #666; border-top: 1px solid #ddd; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>전체 주식 RSI 시뮬레이션 결과 (20250721)</h1>
+            <p>시뮬레이션 기준일: 2025-07-21</p>
+        </div>
+        <div class="summary-cards">
+            <div class="card"><h3>총 종목 수</h3><div class="value">2,874</div><div class="label">분석 대상 종목</div></div>
+            <div class="card"><h3>성공 종목</h3><div class="value">2,743</div><div class="label">시뮬레이션 완료</div></div>
+            <div class="card"><h3>실패 종목</h3><div class="value">131</div><div class="label">시뮬레이션 실패</div></div>
+            <div class="card"><h3>총 수익</h3><div class="value">15,290,219.0원</div><div class="label">전체 종목 합계</div></div>
+        </div>
+        <div class="section">
+            <h2>수익률 통계</h2>
+            <div class="stats-grid">
+                <div class="stat-item"><div class="stat-value">558</div><div class="stat-label">수익 종목</div></div>
+                <div class="stat-item"><div class="stat-value">281</div><div class="stat-label">손실 종목</div></div>
+                <div class="stat-item"><div class="stat-value">1,904</div><div class="stat-label">무손익 종목</div></div>
+                <div class="stat-item"><div class="stat-value">0.06%</div><div class="stat-label">평균 수익률</div></div>
+                <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">고수익 종목 (10%↑)</div></div>
+                <div class="stat-item"><div class="stat-value">186</div><div class="stat-label">중수익 종목 (1-10%)</div></div>
+                <div class="stat-item"><div class="stat-value">371</div><div class="stat-label">저수익 종목 (0-1%)</div></div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>상위 10개 수익 종목</h2>
+            <table class="results-table">
+                <thead><tr><th>순위</th><th>종목코드</th><th>종목명</th><th>수익</th><th>수익률</th><th>매매횟수</th><th>매수횟수</th><th>매도횟수</th><th>최적 RSI 설정</th></tr></thead>
+                <tbody><tr><td>1</td><td>462310</td><td>뉴키즈온</td><td class="profit-positive">1,247,540원</td><td class="profit-positive">12.48%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 72</td></tr><tr><td>2</td><td>088390</td><td>이녹스</td><td class="profit-positive">994,400원</td><td class="profit-positive">9.94%</td><td>2</td><td>1</td><td>1</td><td>과매도: 32, 과매수: 73</td></tr><tr><td>3</td><td>234030</td><td>싸이닉솔루션</td><td class="profit-positive">901,580원</td><td class="profit-positive">9.02%</td><td>4</td><td>2</td><td>2</td><td>과매도: 34, 과매수: 65</td></tr><tr><td>4</td><td>234100</td><td>폴라리스세원</td><td class="profit-positive">655,248원</td><td class="profit-positive">6.55%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 68</td></tr><tr><td>5</td><td>229500</td><td>노브메타파마</td><td class="profit-positive">627,200원</td><td class="profit-positive">6.27%</td><td>2</td><td>1</td><td>1</td><td>과매도: 34, 과매수: 65</td></tr><tr><td>6</td><td>204610</td><td>티쓰리</td><td class="profit-positive">521,010원</td><td class="profit-positive">5.21%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 70</td></tr><tr><td>7</td><td>036000</td><td>예림당</td><td class="profit-positive">503,310원</td><td class="profit-positive">5.03%</td><td>2</td><td>1</td><td>1</td><td>과매도: 29, 과매수: 67</td></tr><tr><td>8</td><td>010170</td><td>대한광통신</td><td class="profit-positive">494,550원</td><td class="profit-positive">4.95%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 75</td></tr><tr><td>9</td><td>476060</td><td>온코닉테라퓨틱스</td><td class="profit-positive">490,250원</td><td class="profit-positive">4.90%</td><td>2</td><td>1</td><td>1</td><td>과매도: 32, 과매수: 68</td></tr><tr><td>10</td><td>272290</td><td>이녹스첨단소재</td><td class="profit-positive">487,500원</td><td class="profit-positive">4.88%</td><td>2</td><td>1</td><td>1</td><td>과매도: 32, 과매수: 74</td></tr></tbody></table></div><div class="section">
+<h2>하위 10개 수익 종목</h2>
+<table class="results-table">
+<thead><tr><th>순위</th><th>종목코드</th><th>종목명</th><th>수익</th><th>수익률</th><th>매매횟수</th><th>매수횟수</th><th>매도횟수</th><th>최적 RSI 설정</th></tr></thead>
+<tbody><tr><td>2734</td><td>256940</td><td>킵스파마</td><td class="profit-negative">-562,480원</td><td class="profit-negative">-5.62%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2735</td><td>060260</td><td>뉴보텍</td><td class="profit-negative">-609,258원</td><td class="profit-negative">-6.09%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2736</td><td>003465</td><td>유화증권우</td><td class="profit-negative">-624,960원</td><td class="profit-negative">-6.25%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2737</td><td>187660</td><td>현대ADM</td><td class="profit-negative">-660,352원</td><td class="profit-negative">-6.60%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2738</td><td>080530</td><td>코디</td><td class="profit-negative">-667,680원</td><td class="profit-negative">-6.68%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2739</td><td>145210</td><td>다이나믹디자인</td><td class="profit-negative">-673,326원</td><td class="profit-negative">-6.73%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2740</td><td>266470</td><td>바이오인프라생명과학</td><td class="profit-negative">-740,736원</td><td class="profit-negative">-7.41%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2741</td><td>043590</td><td>웰킵스하이텍</td><td class="profit-negative">-747,042원</td><td class="profit-negative">-7.47%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2742</td><td>246960</td><td>SCL사이언스</td><td class="profit-negative">-867,595원</td><td class="profit-negative">-8.68%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr><tr><td>2743</td><td>031820</td><td>아이티센씨티에스</td><td class="profit-negative">-1,039,403원</td><td class="profit-negative">-10.39%</td><td>2</td><td>1</td><td>1</td><td>과매도: 25, 과매수: 65</td></tr></tbody></table></div><div class="footer">
+<p>© 2024 RSI 시뮬레이션 분석 시스템</p>
+<p>이 보고서는 자동으로 생성되었습니다.</p>
+</div>
+</div>
+</body>
+</html>

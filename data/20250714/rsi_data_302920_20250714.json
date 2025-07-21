@@ -1,0 +1,55 @@
+{
+    "stock_code": "302920",
+    "date": "20250714",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": false
+    },
+    "data": [
+        {
+            "localDateTime": "20250714092000",
+            "currentPrice": 4800.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714100000",
+            "currentPrice": 4700.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714133000",
+            "currentPrice": 5520.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714134000",
+            "currentPrice": 5400.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714135000",
+            "currentPrice": 5200.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714145000",
+            "currentPrice": 5200.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250714153000",
+            "currentPrice": 5000.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "stock_code": "004545",
+    "date": "20250715",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250715100000",
+            "currentPrice": 12190.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715113000",
+            "currentPrice": 12180.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715123000",
+            "currentPrice": 12100.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715140000",
+            "currentPrice": 12160.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

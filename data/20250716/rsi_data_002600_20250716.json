@@ -1,0 +1,37 @@
+{
+    "stock_code": "002600",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716092000",
+            "currentPrice": 155900.0,
+            "rsi": 43.92277314611671,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716094000",
+            "currentPrice": 155500.0,
+            "rsi": 43.92277314611671,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716103000",
+            "currentPrice": 155500.0,
+            "rsi": 43.30571192328466,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716111000",
+            "currentPrice": 155300.0,
+            "rsi": 46.540937141117055,
+            "rsi_period": 14
+        }
+    ]
+}

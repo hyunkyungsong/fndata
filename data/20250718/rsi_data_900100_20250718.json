@@ -1,0 +1,211 @@
+{
+    "stock_code": "900100",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 33,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 1025.0,
+            "rsi": 79.25531914893617,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718091000",
+            "currentPrice": 1043.0,
+            "rsi": 82.91011235955057,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718092000",
+            "currentPrice": 1051.0,
+            "rsi": 52.049376017362995,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718093000",
+            "currentPrice": 1026.0,
+            "rsi": 48.18626882742525,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718094000",
+            "currentPrice": 1021.0,
+            "rsi": 40.98013984093551,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718095000",
+            "currentPrice": 1010.0,
+            "rsi": 53.28999963219967,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 1028.0,
+            "rsi": 53.28999963219967,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718101000",
+            "currentPrice": 1028.0,
+            "rsi": 55.672770967329164,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718102000",
+            "currentPrice": 1032.0,
+            "rsi": 54.184432478576745,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 1030.0,
+            "rsi": 54.83459137062695,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 1031.0,
+            "rsi": 52.43078895643274,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718105000",
+            "currentPrice": 1028.0,
+            "rsi": 54.575265199609966,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718110000",
+            "currentPrice": 1031.0,
+            "rsi": 55.29866635796737,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718111000",
+            "currentPrice": 1032.0,
+            "rsi": 54.3662690461216,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718112000",
+            "currentPrice": 1031.0,
+            "rsi": 55.18011420452547,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718113000",
+            "currentPrice": 1032.0,
+            "rsi": 55.18011420452547,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718115000",
+            "currentPrice": 1032.0,
+            "rsi": 50.96367446694327,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718120000",
+            "currentPrice": 1028.0,
+            "rsi": 50.96367446694327,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718122000",
+            "currentPrice": 1028.0,
+            "rsi": 54.01975776706014,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718123000",
+            "currentPrice": 1031.0,
+            "rsi": 52.83765766825887,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718124000",
+            "currentPrice": 1030.0,
+            "rsi": 52.83765766825887,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718125000",
+            "currentPrice": 1030.0,
+            "rsi": 52.83765766825887,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718131000",
+            "currentPrice": 1030.0,
+            "rsi": 57.485513037402896,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718133000",
+            "currentPrice": 1034.0,
+            "rsi": 62.46503802077854,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718134000",
+            "currentPrice": 1039.0,
+            "rsi": 55.46851602906171,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718135000",
+            "currentPrice": 1034.0,
+            "rsi": 56.51751303677894,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718141000",
+            "currentPrice": 1035.0,
+            "rsi": 56.51751303677892,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718142000",
+            "currentPrice": 1035.0,
+            "rsi": 59.811343143877146,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718143000",
+            "currentPrice": 1038.0,
+            "rsi": 59.811343143877146,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718144000",
+            "currentPrice": 1038.0,
+            "rsi": 59.811343143877146,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718145000",
+            "currentPrice": 1038.0,
+            "rsi": 57.98274454291074,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718150000",
+            "currentPrice": 1037.0,
+            "rsi": 56.134541458225776,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718151000",
+            "currentPrice": 1036.0,
+            "rsi": 56.134541458225776,
+            "rsi_period": 14
+        }
+    ]
+}

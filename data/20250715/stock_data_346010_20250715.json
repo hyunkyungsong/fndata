@@ -1,0 +1,30 @@
+{
+    "stock_code": "346010",
+    "date": "20250715",
+    "start_date": "20250715",
+    "end_date": "20250715",
+    "data_count": 2,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 2000.0,
+            "openPrice": 1800.0,
+            "highPrice": 2000.0,
+            "lowPrice": 1800.0,
+            "accumulatedTradingVolume": 10
+        },
+        {
+            "localDateTime": "20250715145000",
+            "currentPrice": 1900.0,
+            "openPrice": 1900.0,
+            "highPrice": 1900.0,
+            "lowPrice": 1900.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

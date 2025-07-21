@@ -1,0 +1,61 @@
+{
+    "stock_code": "149300",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 53.0,
+            "rsi": 41.93548387096774,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718102000",
+            "currentPrice": 52.0,
+            "rsi": 39.53216374269006,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 51.0,
+            "rsi": 39.53216374269006,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 51.0,
+            "rsi": 39.53216374269006,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718110000",
+            "currentPrice": 51.0,
+            "rsi": 39.53216374269006,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718115000",
+            "currentPrice": 51.0,
+            "rsi": 39.53216374269006,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718120000",
+            "currentPrice": 51.0,
+            "rsi": 39.53216374269006,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718124000",
+            "currentPrice": 51.0,
+            "rsi": 39.532163742690045,
+            "rsi_period": 14
+        }
+    ]
+}

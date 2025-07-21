@@ -1,0 +1,31 @@
+{
+    "stock_code": "001525",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717090000",
+            "currentPrice": 4325.0,
+            "rsi": 71.5846994535519,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717093000",
+            "currentPrice": 4345.0,
+            "rsi": 70.14003294892916,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717103000",
+            "currentPrice": 4340.0,
+            "rsi": 67.21824143794024,
+            "rsi_period": 14
+        }
+    ]
+}

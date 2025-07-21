@@ -1,0 +1,38 @@
+{
+    "stock_code": "245450",
+    "date": "20250717",
+    "start_date": "20250717",
+    "end_date": "20250717",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250717090000",
+            "currentPrice": 1300.0,
+            "openPrice": 1300.0,
+            "highPrice": 1300.0,
+            "lowPrice": 1300.0,
+            "accumulatedTradingVolume": 1
+        },
+        {
+            "localDateTime": "20250717093000",
+            "currentPrice": 1105.0,
+            "openPrice": 1105.0,
+            "highPrice": 1105.0,
+            "lowPrice": 1105.0,
+            "accumulatedTradingVolume": 5
+        },
+        {
+            "localDateTime": "20250717094000",
+            "currentPrice": 1250.0,
+            "openPrice": 1250.0,
+            "highPrice": 1250.0,
+            "lowPrice": 1250.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

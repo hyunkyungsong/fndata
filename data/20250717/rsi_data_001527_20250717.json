@@ -1,0 +1,31 @@
+{
+    "stock_code": "001527",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717123000",
+            "currentPrice": 8980.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717150000",
+            "currentPrice": 8410.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717153000",
+            "currentPrice": 9170.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

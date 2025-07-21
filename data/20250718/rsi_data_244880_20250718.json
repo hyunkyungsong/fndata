@@ -1,0 +1,31 @@
+{
+    "stock_code": "244880",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2195.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718142000",
+            "currentPrice": 2170.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718153000",
+            "currentPrice": 2175.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

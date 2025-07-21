@@ -1,0 +1,61 @@
+{
+    "stock_code": "007575",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721090000",
+            "currentPrice": 14500.0,
+            "rsi": 32.786885245901644,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721093000",
+            "currentPrice": 14500.0,
+            "rsi": 32.786885245901644,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721100000",
+            "currentPrice": 14500.0,
+            "rsi": 24.696353999808906,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721103000",
+            "currentPrice": 14340.0,
+            "rsi": 24.696353999808906,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721113000",
+            "currentPrice": 14340.0,
+            "rsi": 24.696353999808906,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721123000",
+            "currentPrice": 14340.0,
+            "rsi": 24.696353999808906,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721133000",
+            "currentPrice": 14340.0,
+            "rsi": 24.696353999808906,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721140000",
+            "currentPrice": 14340.0,
+            "rsi": 44.52515294494939,
+            "rsi_period": 14
+        }
+    ]
+}

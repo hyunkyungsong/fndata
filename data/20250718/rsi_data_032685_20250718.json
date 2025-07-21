@@ -1,0 +1,55 @@
+{
+    "stock_code": "032685",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 7250.0,
+            "rsi": 56.46258503401361,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718093000",
+            "currentPrice": 7250.0,
+            "rsi": 59.64630824907659,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 7350.0,
+            "rsi": 60.57767522450661,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718110000",
+            "currentPrice": 7380.0,
+            "rsi": 60.57767522450662,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718113000",
+            "currentPrice": 7380.0,
+            "rsi": 61.26883152192914,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718140000",
+            "currentPrice": 7400.0,
+            "rsi": 53.22883808087829,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718150000",
+            "currentPrice": 7240.0,
+            "rsi": 53.22883808087829,
+            "rsi_period": 14
+        }
+    ]
+}

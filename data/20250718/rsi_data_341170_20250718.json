@@ -1,0 +1,61 @@
+{
+    "stock_code": "341170",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718091000",
+            "currentPrice": 1900.0,
+            "rsi": 41.95937367752856,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718095000",
+            "currentPrice": 1960.0,
+            "rsi": 41.91480136577963,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718101000",
+            "currentPrice": 1959.0,
+            "rsi": 39.26462765853579,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718102000",
+            "currentPrice": 1900.0,
+            "rsi": 38.81664867789188,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 1890.0,
+            "rsi": 38.81664867789188,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 1890.0,
+            "rsi": 36.40790174176151,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718142000",
+            "currentPrice": 1840.0,
+            "rsi": 37.98280378461657,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718143000",
+            "currentPrice": 1859.0,
+            "rsi": 44.31435006256095,
+            "rsi_period": 14
+        }
+    ]
+}

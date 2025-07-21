@@ -1,0 +1,49 @@
+{
+    "stock_code": "014915",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 6,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716090000",
+            "currentPrice": 4670.0,
+            "rsi": 41.582491582491585,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716093000",
+            "currentPrice": 4645.0,
+            "rsi": 48.161342220179264,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716100000",
+            "currentPrice": 4695.0,
+            "rsi": 40.74835833844405,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716110000",
+            "currentPrice": 4620.0,
+            "rsi": 43.25656607952574,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716113000",
+            "currentPrice": 4640.0,
+            "rsi": 43.25656607952574,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716143000",
+            "currentPrice": 4640.0,
+            "rsi": 43.25656607952574,
+            "rsi_period": 14
+        }
+    ]
+}

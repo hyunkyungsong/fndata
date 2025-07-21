@@ -1,0 +1,38 @@
+{
+    "stock_code": "244880",
+    "date": "20250718",
+    "start_date": "20250718",
+    "end_date": "20250718",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2195.0,
+            "openPrice": 2195.0,
+            "highPrice": 2195.0,
+            "lowPrice": 2195.0,
+            "accumulatedTradingVolume": 1
+        },
+        {
+            "localDateTime": "20250718142000",
+            "currentPrice": 2170.0,
+            "openPrice": 2170.0,
+            "highPrice": 2175.0,
+            "lowPrice": 2170.0,
+            "accumulatedTradingVolume": 600
+        },
+        {
+            "localDateTime": "20250718153000",
+            "currentPrice": 2175.0,
+            "openPrice": 2175.0,
+            "highPrice": 2175.0,
+            "lowPrice": 2175.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

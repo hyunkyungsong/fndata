@@ -1,0 +1,55 @@
+{
+    "stock_code": "440820",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2140.0,
+            "rsi": 40.0,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718093000",
+            "currentPrice": 2140.0,
+            "rsi": 39.99999999999999,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718130000",
+            "currentPrice": 2140.0,
+            "rsi": 39.99999999999999,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718133000",
+            "currentPrice": 2140.0,
+            "rsi": 39.99999999999999,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718140000",
+            "currentPrice": 2140.0,
+            "rsi": 39.99999999999999,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718143000",
+            "currentPrice": 2140.0,
+            "rsi": 39.99999999999999,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718150000",
+            "currentPrice": 2140.0,
+            "rsi": 39.999999999999986,
+            "rsi_period": 14
+        }
+    ]
+}

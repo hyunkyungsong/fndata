@@ -1,0 +1,38 @@
+{
+    "stock_code": "179720",
+    "date": "20250714",
+    "start_date": "20250714",
+    "end_date": "20250714",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250714094000",
+            "currentPrice": 9990.0,
+            "openPrice": 9990.0,
+            "highPrice": 9990.0,
+            "lowPrice": 9990.0,
+            "accumulatedTradingVolume": 15000
+        },
+        {
+            "localDateTime": "20250714123000",
+            "currentPrice": 9600.0,
+            "openPrice": 9600.0,
+            "highPrice": 9600.0,
+            "lowPrice": 9600.0,
+            "accumulatedTradingVolume": 2
+        },
+        {
+            "localDateTime": "20250714125000",
+            "currentPrice": 10000.0,
+            "openPrice": 9600.0,
+            "highPrice": 10000.0,
+            "lowPrice": 9400.0,
+            "accumulatedTradingVolume": 9
+        }
+    ]
+}

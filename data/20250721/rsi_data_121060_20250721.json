@@ -1,0 +1,31 @@
+{
+    "stock_code": "121060",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721103000",
+            "currentPrice": 780.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721143000",
+            "currentPrice": 688.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721145000",
+            "currentPrice": 686.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

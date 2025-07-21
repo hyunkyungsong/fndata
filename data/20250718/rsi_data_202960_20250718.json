@@ -1,0 +1,61 @@
+{
+    "stock_code": "202960",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 992.0,
+            "rsi": 37.28403593642018,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 885.0,
+            "rsi": 37.28403593642018,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718120000",
+            "currentPrice": 885.0,
+            "rsi": 32.45823261576142,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718125000",
+            "currentPrice": 832.0,
+            "rsi": 36.468348303762106,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718130000",
+            "currentPrice": 856.0,
+            "rsi": 41.024786095908986,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718131000",
+            "currentPrice": 885.0,
+            "rsi": 41.024786095908986,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718134000",
+            "currentPrice": 885.0,
+            "rsi": 40.444771321224415,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718140000",
+            "currentPrice": 880.0,
+            "rsi": 54.34681114843313,
+            "rsi_period": 14
+        }
+    ]
+}

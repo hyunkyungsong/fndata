@@ -1,0 +1,38 @@
+{
+    "stock_code": "227420",
+    "date": "20250714",
+    "start_date": "20250714",
+    "end_date": "20250714",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250714090000",
+            "currentPrice": 890.0,
+            "openPrice": 890.0,
+            "highPrice": 890.0,
+            "lowPrice": 890.0,
+            "accumulatedTradingVolume": 350
+        },
+        {
+            "localDateTime": "20250714093000",
+            "currentPrice": 890.0,
+            "openPrice": 890.0,
+            "highPrice": 890.0,
+            "lowPrice": 890.0,
+            "accumulatedTradingVolume": 100
+        },
+        {
+            "localDateTime": "20250714145000",
+            "currentPrice": 1089.0,
+            "openPrice": 890.0,
+            "highPrice": 1089.0,
+            "lowPrice": 890.0,
+            "accumulatedTradingVolume": 21
+        }
+    ]
+}

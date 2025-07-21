@@ -1,0 +1,30 @@
+{
+    "stock_code": "413300",
+    "date": "20250715",
+    "start_date": "20250715",
+    "end_date": "20250715",
+    "data_count": 2,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 2990.0,
+            "openPrice": 2985.0,
+            "highPrice": 2990.0,
+            "lowPrice": 2985.0,
+            "accumulatedTradingVolume": 10
+        },
+        {
+            "localDateTime": "20250715100000",
+            "currentPrice": 2615.0,
+            "openPrice": 2615.0,
+            "highPrice": 2615.0,
+            "lowPrice": 2615.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

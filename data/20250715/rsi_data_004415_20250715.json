@@ -1,0 +1,73 @@
+{
+    "stock_code": "004415",
+    "date": "20250715",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 1242.0,
+            "rsi": 53.530950305143854,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715093000",
+            "currentPrice": 1258.0,
+            "rsi": 53.530950305143854,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715103000",
+            "currentPrice": 1258.0,
+            "rsi": 43.64555599019127,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715110000",
+            "currentPrice": 1242.0,
+            "rsi": 43.64555599019127,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715113000",
+            "currentPrice": 1242.0,
+            "rsi": 52.5395755779036,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715120000",
+            "currentPrice": 1256.0,
+            "rsi": 52.53957557790361,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715123000",
+            "currentPrice": 1256.0,
+            "rsi": 52.53957557790362,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715130000",
+            "currentPrice": 1256.0,
+            "rsi": 52.53957557790361,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715133000",
+            "currentPrice": 1256.0,
+            "rsi": 52.53957557790362,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715143000",
+            "currentPrice": 1256.0,
+            "rsi": 52.53957557790362,
+            "rsi_period": 14
+        }
+    ]
+}

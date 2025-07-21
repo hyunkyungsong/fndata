@@ -1,0 +1,55 @@
+{
+    "stock_code": "021045",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2855.0,
+            "rsi": 55.29100529100529,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718093000",
+            "currentPrice": 2860.0,
+            "rsi": 60.06906579425663,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 2875.0,
+            "rsi": 60.06906579425663,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 2875.0,
+            "rsi": 60.06906579425663,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718110000",
+            "currentPrice": 2875.0,
+            "rsi": 60.06906579425663,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718113000",
+            "currentPrice": 2875.0,
+            "rsi": 60.06906579425663,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718133000",
+            "currentPrice": 2875.0,
+            "rsi": 60.06906579425663,
+            "rsi_period": 14
+        }
+    ]
+}

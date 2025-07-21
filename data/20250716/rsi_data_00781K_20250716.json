@@ -1,0 +1,49 @@
+{
+    "stock_code": "00781K",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 6,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716100000",
+            "currentPrice": 5590.0,
+            "rsi": 82.3529411764706,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716130000",
+            "currentPrice": 5590.0,
+            "rsi": 77.09351580319323,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716133000",
+            "currentPrice": 5580.0,
+            "rsi": 78.56757580732159,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716140000",
+            "currentPrice": 5590.0,
+            "rsi": 81.17655446674007,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716143000",
+            "currentPrice": 5610.0,
+            "rsi": 81.17655446674007,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716150000",
+            "currentPrice": 5610.0,
+            "rsi": 85.32121304006156,
+            "rsi_period": 14
+        }
+    ]
+}

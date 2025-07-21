@@ -1,0 +1,37 @@
+{
+    "stock_code": "215570",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716092000",
+            "currentPrice": 480.0,
+            "rsi": 43.829018663455756,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716114000",
+            "currentPrice": 460.0,
+            "rsi": 46.26766490940504,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716115000",
+            "currentPrice": 470.0,
+            "rsi": 44.2010749782693,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716120000",
+            "currentPrice": 460.0,
+            "rsi": 49.098028787690836,
+            "rsi_period": 14
+        }
+    ]
+}

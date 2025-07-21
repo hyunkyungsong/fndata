@@ -1,0 +1,61 @@
+{
+    "stock_code": "200580",
+    "date": "20250715",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250715093000",
+            "currentPrice": 7800.0,
+            "rsi": 44.919786096256686,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715095000",
+            "currentPrice": 7800.0,
+            "rsi": 50.45116848367538,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715100000",
+            "currentPrice": 7980.0,
+            "rsi": 45.527420741165194,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715103000",
+            "currentPrice": 7800.0,
+            "rsi": 50.967152218612895,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715141000",
+            "currentPrice": 7990.0,
+            "rsi": 46.01819411020959,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715143000",
+            "currentPrice": 7800.0,
+            "rsi": 46.01819411020959,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715144000",
+            "currentPrice": 7800.0,
+            "rsi": 51.48200457329542,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715151000",
+            "currentPrice": 7990.0,
+            "rsi": 47.90895264735814,
+            "rsi_period": 14
+        }
+    ]
+}

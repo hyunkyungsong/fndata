@@ -1,0 +1,55 @@
+{
+    "stock_code": "270210",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717091000",
+            "currentPrice": 24900.0,
+            "rsi": 43.3849821215733,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717094000",
+            "currentPrice": 23500.0,
+            "rsi": 43.638189120116834,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717095000",
+            "currentPrice": 23550.0,
+            "rsi": 49.69544674077881,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717104000",
+            "currentPrice": 24800.0,
+            "rsi": 49.23953609887082,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717124000",
+            "currentPrice": 24700.0,
+            "rsi": 44.215838184012775,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717132000",
+            "currentPrice": 23550.0,
+            "rsi": 49.30185482287756,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717134000",
+            "currentPrice": 24600.0,
+            "rsi": 48.84509988511804,
+            "rsi_period": 14
+        }
+    ]
+}

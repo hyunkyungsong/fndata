@@ -1,0 +1,31 @@
+{
+    "stock_code": "233990",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717090000",
+            "currentPrice": 987.0,
+            "rsi": 42.50165453342158,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717120000",
+            "currentPrice": 972.0,
+            "rsi": 42.33269443345807,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717140000",
+            "currentPrice": 970.0,
+            "rsi": 41.61996498044627,
+            "rsi_period": 14
+        }
+    ]
+}

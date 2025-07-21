@@ -1,0 +1,38 @@
+{
+    "stock_code": "121060",
+    "date": "20250716",
+    "start_date": "20250716",
+    "end_date": "20250716",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250716115000",
+            "currentPrice": 800.0,
+            "openPrice": 750.0,
+            "highPrice": 800.0,
+            "lowPrice": 750.0,
+            "accumulatedTradingVolume": 899
+        },
+        {
+            "localDateTime": "20250716122000",
+            "currentPrice": 800.0,
+            "openPrice": 800.0,
+            "highPrice": 800.0,
+            "lowPrice": 800.0,
+            "accumulatedTradingVolume": 1
+        },
+        {
+            "localDateTime": "20250716145000",
+            "currentPrice": 750.0,
+            "openPrice": 750.0,
+            "highPrice": 750.0,
+            "lowPrice": 750.0,
+            "accumulatedTradingVolume": 72
+        }
+    ]
+}

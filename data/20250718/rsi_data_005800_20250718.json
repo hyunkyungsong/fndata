@@ -1,0 +1,229 @@
+{
+    "stock_code": "005800",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 36,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 13830.0,
+            "rsi": 48.43423799582463,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718091000",
+            "currentPrice": 13900.0,
+            "rsi": 47.43878781523619,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718092000",
+            "currentPrice": 13880.0,
+            "rsi": 47.43878781523619,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718093000",
+            "currentPrice": 13880.0,
+            "rsi": 43.30946153203433,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718094000",
+            "currentPrice": 13800.0,
+            "rsi": 39.597542188054035,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718095000",
+            "currentPrice": 13720.0,
+            "rsi": 35.13809212183726,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 13610.0,
+            "rsi": 32.28994532234306,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718101000",
+            "currentPrice": 13530.0,
+            "rsi": 34.43611868094479,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718102000",
+            "currentPrice": 13560.0,
+            "rsi": 34.43611868094479,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 13560.0,
+            "rsi": 32.07773382838178,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 13500.0,
+            "rsi": 30.936875750705624,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718105000",
+            "currentPrice": 13470.0,
+            "rsi": 32.65643625562349,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718110000",
+            "currentPrice": 13490.0,
+            "rsi": 27.495629161420098,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718111000",
+            "currentPrice": 13350.0,
+            "rsi": 33.18153929150259,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718112000",
+            "currentPrice": 13420.0,
+            "rsi": 38.38516196514624,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718113000",
+            "currentPrice": 13490.0,
+            "rsi": 38.38516196514624,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718114000",
+            "currentPrice": 13490.0,
+            "rsi": 37.41953574871251,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718115000",
+            "currentPrice": 13470.0,
+            "rsi": 39.86331026451644,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718120000",
+            "currentPrice": 13500.0,
+            "rsi": 38.77618191921353,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718121000",
+            "currentPrice": 13480.0,
+            "rsi": 40.52297467698533,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718122000",
+            "currentPrice": 13500.0,
+            "rsi": 40.52297467698533,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718123000",
+            "currentPrice": 13500.0,
+            "rsi": 39.86344376118712,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718124000",
+            "currentPrice": 13490.0,
+            "rsi": 31.564713720351094,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718130000",
+            "currentPrice": 13340.0,
+            "rsi": 31.564713720351094,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718131000",
+            "currentPrice": 13340.0,
+            "rsi": 30.58028021424586,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718132000",
+            "currentPrice": 13320.0,
+            "rsi": 29.586560964645926,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718133000",
+            "currentPrice": 13300.0,
+            "rsi": 36.27657864497632,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718134000",
+            "currentPrice": 13360.0,
+            "rsi": 33.42644431987887,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718140000",
+            "currentPrice": 13310.0,
+            "rsi": 41.36434168514344,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718141000",
+            "currentPrice": 13390.0,
+            "rsi": 50.16345712904293,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718142000",
+            "currentPrice": 13500.0,
+            "rsi": 44.30522395219875,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718143000",
+            "currentPrice": 13410.0,
+            "rsi": 50.527225884491216,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718144000",
+            "currentPrice": 13500.0,
+            "rsi": 50.527225884491216,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718145000",
+            "currentPrice": 13500.0,
+            "rsi": 51.91178402726127,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718150000",
+            "currentPrice": 13520.0,
+            "rsi": 51.91178402726127,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718151000",
+            "currentPrice": 13520.0,
+            "rsi": 51.91178402726127,
+            "rsi_period": 14
+        }
+    ]
+}

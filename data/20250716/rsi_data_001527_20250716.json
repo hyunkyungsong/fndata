@@ -1,0 +1,55 @@
+{
+    "stock_code": "001527",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716090000",
+            "currentPrice": 9010.0,
+            "rsi": 44.8455675892499,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716093000",
+            "currentPrice": 8910.0,
+            "rsi": 50.52998643898928,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716100000",
+            "currentPrice": 9100.0,
+            "rsi": 52.20519423356568,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716103000",
+            "currentPrice": 9160.0,
+            "rsi": 52.49393568881532,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716123000",
+            "currentPrice": 9170.0,
+            "rsi": 52.49393568881531,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716143000",
+            "currentPrice": 9170.0,
+            "rsi": 50.03973082980287,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716150000",
+            "currentPrice": 9100.0,
+            "rsi": 52.43457753085743,
+            "rsi_period": 14
+        }
+    ]
+}

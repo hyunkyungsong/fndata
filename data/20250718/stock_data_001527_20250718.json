@@ -1,0 +1,38 @@
+{
+    "stock_code": "001527",
+    "date": "20250718",
+    "start_date": "20250718",
+    "end_date": "20250718",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 9230.0,
+            "openPrice": 9230.0,
+            "highPrice": 9230.0,
+            "lowPrice": 9230.0,
+            "accumulatedTradingVolume": 40
+        },
+        {
+            "localDateTime": "20250718150000",
+            "currentPrice": 9220.0,
+            "openPrice": 9220.0,
+            "highPrice": 9220.0,
+            "lowPrice": 9220.0,
+            "accumulatedTradingVolume": 50
+        },
+        {
+            "localDateTime": "20250718153000",
+            "currentPrice": 9230.0,
+            "openPrice": 9230.0,
+            "highPrice": 9230.0,
+            "lowPrice": 9230.0,
+            "accumulatedTradingVolume": 210
+        }
+    ]
+}

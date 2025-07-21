@@ -1,0 +1,38 @@
+{
+    "stock_code": "103660",
+    "date": "20250711",
+    "start_date": "20250711",
+    "end_date": "20250711",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250711090000",
+            "currentPrice": 650.0,
+            "openPrice": 730.0,
+            "highPrice": 730.0,
+            "lowPrice": 650.0,
+            "accumulatedTradingVolume": 338
+        },
+        {
+            "localDateTime": "20250711092000",
+            "currentPrice": 650.0,
+            "openPrice": 640.0,
+            "highPrice": 650.0,
+            "lowPrice": 640.0,
+            "accumulatedTradingVolume": 144
+        },
+        {
+            "localDateTime": "20250711093000",
+            "currentPrice": 729.0,
+            "openPrice": 729.0,
+            "highPrice": 729.0,
+            "lowPrice": 729.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

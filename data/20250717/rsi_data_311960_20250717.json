@@ -1,0 +1,37 @@
+{
+    "stock_code": "311960",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717090000",
+            "currentPrice": 2405.0,
+            "rsi": 39.738620002215086,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717091000",
+            "currentPrice": 2300.0,
+            "rsi": 36.676443067535786,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717131000",
+            "currentPrice": 2200.0,
+            "rsi": 33.86605201560903,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717135000",
+            "currentPrice": 2100.0,
+            "rsi": 38.90746604608198,
+            "rsi_period": 14
+        }
+    ]
+}

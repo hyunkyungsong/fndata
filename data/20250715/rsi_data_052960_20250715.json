@@ -1,0 +1,43 @@
+{
+    "stock_code": "052960",
+    "date": "20250715",
+    "rsi_period": 14,
+    "data_count": 5,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 3400.0,
+            "rsi": 50.188679245283026,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715094000",
+            "currentPrice": 3400.0,
+            "rsi": 42.71163895486936,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715102000",
+            "currentPrice": 3200.0,
+            "rsi": 39.539786604962075,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715112000",
+            "currentPrice": 3100.0,
+            "rsi": 39.539786604962075,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715145000",
+            "currentPrice": 3100.0,
+            "rsi": 36.842633012773184,
+            "rsi_period": 14
+        }
+    ]
+}

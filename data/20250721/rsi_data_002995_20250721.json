@@ -1,0 +1,61 @@
+{
+    "stock_code": "002995",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721093000",
+            "currentPrice": 12240.0,
+            "rsi": 51.07577174929841,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721103000",
+            "currentPrice": 12080.0,
+            "rsi": 52.417943872909234,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721113000",
+            "currentPrice": 12100.0,
+            "rsi": 60.08336758057888,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721123000",
+            "currentPrice": 12230.0,
+            "rsi": 60.609058712173805,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721130000",
+            "currentPrice": 12240.0,
+            "rsi": 59.76147472148914,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721133000",
+            "currentPrice": 12230.0,
+            "rsi": 59.76147472148914,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721140000",
+            "currentPrice": 12230.0,
+            "rsi": 48.067603611265874,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721150000",
+            "currentPrice": 12080.0,
+            "rsi": 57.10646144211465,
+            "rsi_period": 14
+        }
+    ]
+}

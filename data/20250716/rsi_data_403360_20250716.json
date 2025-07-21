@@ -1,0 +1,19 @@
+{
+    "stock_code": "403360",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 1,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716151000",
+            "currentPrice": 7760.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

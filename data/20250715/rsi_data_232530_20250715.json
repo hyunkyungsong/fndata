@@ -1,0 +1,43 @@
+{
+    "stock_code": "232530",
+    "date": "20250715",
+    "rsi_period": 14,
+    "data_count": 5,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 3885.0,
+            "rsi": 32.20009713453133,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715123000",
+            "currentPrice": 3795.0,
+            "rsi": 32.69294959759671,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715145000",
+            "currentPrice": 3800.0,
+            "rsi": 37.57947290579138,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715150000",
+            "currentPrice": 3850.0,
+            "rsi": 37.57947290579138,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715151000",
+            "currentPrice": 3850.0,
+            "rsi": 39.61328206957078,
+            "rsi_period": 14
+        }
+    ]
+}

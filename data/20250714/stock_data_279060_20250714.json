@@ -1,0 +1,38 @@
+{
+    "stock_code": "279060",
+    "date": "20250714",
+    "start_date": "20250714",
+    "end_date": "20250714",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250714090000",
+            "currentPrice": 1699.0,
+            "openPrice": 1500.0,
+            "highPrice": 1699.0,
+            "lowPrice": 1500.0,
+            "accumulatedTradingVolume": 76
+        },
+        {
+            "localDateTime": "20250714093000",
+            "currentPrice": 1500.0,
+            "openPrice": 1501.0,
+            "highPrice": 1501.0,
+            "lowPrice": 1500.0,
+            "accumulatedTradingVolume": 11
+        },
+        {
+            "localDateTime": "20250714133000",
+            "currentPrice": 1474.0,
+            "openPrice": 1474.0,
+            "highPrice": 1474.0,
+            "lowPrice": 1474.0,
+            "accumulatedTradingVolume": 135
+        }
+    ]
+}

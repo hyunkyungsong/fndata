@@ -1,0 +1,38 @@
+{
+    "stock_code": "311060",
+    "date": "20250715",
+    "start_date": "20250715",
+    "end_date": "20250715",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250715093000",
+            "currentPrice": 3590.0,
+            "openPrice": 3400.0,
+            "highPrice": 3590.0,
+            "lowPrice": 3335.0,
+            "accumulatedTradingVolume": 601
+        },
+        {
+            "localDateTime": "20250715115000",
+            "currentPrice": 3590.0,
+            "openPrice": 3590.0,
+            "highPrice": 3590.0,
+            "lowPrice": 3590.0,
+            "accumulatedTradingVolume": 50
+        },
+        {
+            "localDateTime": "20250715151000",
+            "currentPrice": 3585.0,
+            "openPrice": 3585.0,
+            "highPrice": 3585.0,
+            "lowPrice": 3585.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

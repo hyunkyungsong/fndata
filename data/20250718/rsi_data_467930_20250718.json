@@ -1,0 +1,73 @@
+{
+    "stock_code": "467930",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2195.0,
+            "rsi": 52.17391304347826,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718095000",
+            "currentPrice": 2195.0,
+            "rsi": 52.17391304347827,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 2195.0,
+            "rsi": 52.17391304347827,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718101000",
+            "currentPrice": 2195.0,
+            "rsi": 49.29133246754368,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 2190.0,
+            "rsi": 44.04949383551521,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718120000",
+            "currentPrice": 2180.0,
+            "rsi": 44.04949383551521,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718122000",
+            "currentPrice": 2180.0,
+            "rsi": 50.19245275696033,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718123000",
+            "currentPrice": 2190.0,
+            "rsi": 50.19245275696033,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718130000",
+            "currentPrice": 2190.0,
+            "rsi": 47.18813557895034,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718145000",
+            "currentPrice": 2185.0,
+            "rsi": 47.18813557895034,
+            "rsi_period": 14
+        }
+    ]
+}

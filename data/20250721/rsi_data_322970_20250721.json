@@ -1,0 +1,19 @@
+{
+    "stock_code": "322970",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 1,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721102000",
+            "currentPrice": 2125.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

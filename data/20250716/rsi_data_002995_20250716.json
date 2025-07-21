@@ -1,0 +1,43 @@
+{
+    "stock_code": "002995",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 5,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716090000",
+            "currentPrice": 12170.0,
+            "rsi": 55.769230769230774,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716100000",
+            "currentPrice": 12170.0,
+            "rsi": 55.769230769230774,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716103000",
+            "currentPrice": 12170.0,
+            "rsi": 55.769230769230774,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716110000",
+            "currentPrice": 12170.0,
+            "rsi": 55.769230769230774,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716123000",
+            "currentPrice": 12170.0,
+            "rsi": 52.82617023184746,
+            "rsi_period": 14
+        }
+    ]
+}

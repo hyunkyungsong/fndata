@@ -1,0 +1,370 @@
+{
+    "summary": {
+        "stock_code": "226950",
+        "date": "20250716",
+        "initial_capital": 10000000,
+        "final_value": 9826450.0,
+        "profit": -173550.0,
+        "profit_rate": -1.7354999999999998,
+        "rsi_oversold": 30,
+        "rsi_overbought": 70
+    },
+    "trading_statistics": {
+        "total_trades": 2,
+        "buy_trades": 1,
+        "sell_trades": 1,
+        "avg_buy_price": 37450.0,
+        "avg_sell_price": 36800.0,
+        "max_portfolio_value": 10000000.0,
+        "min_portfolio_value": 9746350.0,
+        "max_profit_rate": 0.0,
+        "max_loss_rate": -2.5364999999999998
+    },
+    "rsi_analysis": {
+        "min_rsi": 22.064893349108004,
+        "max_rsi": 47.14465119389844,
+        "mean_rsi": 33.311587140437375,
+        "median_rsi": 30.961446669517585,
+        "std_rsi": 7.575084305497592,
+        "oversold_count": 17,
+        "overbought_count": 0,
+        "neutral_count": 22,
+        "total_count": 39
+    },
+    "trades": [
+        {
+            "timestamp": "20250716091000",
+            "action": "BUY",
+            "price": 37450.0,
+            "shares": 267.0,
+            "cost": 9999150.0,
+            "rsi": 29.430930846581646,
+            "capital": 850.0,
+            "shares_held": 267.0
+        },
+        {
+            "timestamp": "20250716153000",
+            "action": "FINAL_SELL",
+            "price": 36800.0,
+            "shares": 267.0,
+            "revenue": 9825600.0,
+            "rsi": 41.63798884908701,
+            "capital": 9826450.0,
+            "shares_held": 0
+        }
+    ],
+    "portfolio_values": [
+        {
+            "timestamp": "20250716090000",
+            "price": 37650.0,
+            "rsi": 30.786860198624908,
+            "capital": 10000000,
+            "shares": 0,
+            "portfolio_value": 10000000.0
+        },
+        {
+            "timestamp": "20250716091000",
+            "price": 37450.0,
+            "rsi": 29.430930846581646,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 10000000.0
+        },
+        {
+            "timestamp": "20250716092000",
+            "price": 37450.0,
+            "rsi": 29.430930846581646,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 10000000.0
+        },
+        {
+            "timestamp": "20250716093000",
+            "price": 37400.0,
+            "rsi": 29.059845049781984,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9986650.0
+        },
+        {
+            "timestamp": "20250716094000",
+            "price": 37300.0,
+            "rsi": 28.291526370425146,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9959950.0
+        },
+        {
+            "timestamp": "20250716095000",
+            "price": 37450.0,
+            "rsi": 31.228710725701873,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 10000000.0
+        },
+        {
+            "timestamp": "20250716100000",
+            "price": 37450.0,
+            "rsi": 31.228710725701873,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 10000000.0
+        },
+        {
+            "timestamp": "20250716101000",
+            "price": 37450.0,
+            "rsi": 31.228710725701873,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 10000000.0
+        },
+        {
+            "timestamp": "20250716102000",
+            "price": 37400.0,
+            "rsi": 30.705105328056888,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9986650.0
+        },
+        {
+            "timestamp": "20250716103000",
+            "price": 37300.0,
+            "rsi": 29.63489739233792,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9959950.0
+        },
+        {
+            "timestamp": "20250716104000",
+            "price": 37250.0,
+            "rsi": 29.088962940823038,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9946600.0
+        },
+        {
+            "timestamp": "20250716105000",
+            "price": 37000.0,
+            "rsi": 26.463867625724106,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9879850.0
+        },
+        {
+            "timestamp": "20250716110000",
+            "price": 37000.0,
+            "rsi": 26.463867625724106,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9879850.0
+        },
+        {
+            "timestamp": "20250716111000",
+            "price": 37000.0,
+            "rsi": 26.46386762572412,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9879850.0
+        },
+        {
+            "timestamp": "20250716112000",
+            "price": 37000.0,
+            "rsi": 26.46386762572412,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9879850.0
+        },
+        {
+            "timestamp": "20250716113000",
+            "price": 36950.0,
+            "rsi": 25.836645043065047,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9866500.0
+        },
+        {
+            "timestamp": "20250716114000",
+            "price": 36875.0,
+            "rsi": 24.883929447186006,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9846475.0
+        },
+        {
+            "timestamp": "20250716115000",
+            "price": 36750.0,
+            "rsi": 23.33921958607023,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9813100.0
+        },
+        {
+            "timestamp": "20250716120000",
+            "price": 36700.0,
+            "rsi": 22.731367112585062,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9799750.0
+        },
+        {
+            "timestamp": "20250716121000",
+            "price": 36700.0,
+            "rsi": 22.731367112585062,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9799750.0
+        },
+        {
+            "timestamp": "20250716122000",
+            "price": 36650.0,
+            "rsi": 22.064893349108004,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9786400.0
+        },
+        {
+            "timestamp": "20250716123000",
+            "price": 36750.0,
+            "rsi": 26.69414554219388,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9813100.0
+        },
+        {
+            "timestamp": "20250716124000",
+            "price": 37200.0,
+            "rsi": 43.079141709180846,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9933250.0
+        },
+        {
+            "timestamp": "20250716125000",
+            "price": 37200.0,
+            "rsi": 43.079141709180846,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9933250.0
+        },
+        {
+            "timestamp": "20250716130000",
+            "price": 37150.0,
+            "rsi": 41.873080219757036,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9919900.0
+        },
+        {
+            "timestamp": "20250716131000",
+            "price": 37150.0,
+            "rsi": 41.873080219757036,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9919900.0
+        },
+        {
+            "timestamp": "20250716132000",
+            "price": 37050.0,
+            "rsi": 39.31971945223274,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9893200.0
+        },
+        {
+            "timestamp": "20250716133000",
+            "price": 37150.0,
+            "rsi": 43.0589918807722,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9919900.0
+        },
+        {
+            "timestamp": "20250716134000",
+            "price": 37250.0,
+            "rsi": 46.602589544997834,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9946600.0
+        },
+        {
+            "timestamp": "20250716135000",
+            "price": 37200.0,
+            "rsi": 45.09157263443359,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9933250.0
+        },
+        {
+            "timestamp": "20250716140000",
+            "price": 37100.0,
+            "rsi": 42.14815097570819,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9906550.0
+        },
+        {
+            "timestamp": "20250716141000",
+            "price": 37000.0,
+            "rsi": 39.379834907608554,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9879850.0
+        },
+        {
+            "timestamp": "20250716142000",
+            "price": 37100.0,
+            "rsi": 43.384422276467724,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9906550.0
+        },
+        {
+            "timestamp": "20250716143000",
+            "price": 37200.0,
+            "rsi": 47.14465119389844,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9933250.0
+        },
+        {
+            "timestamp": "20250716144000",
+            "price": 36900.0,
+            "rsi": 38.815678129172156,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9853150.0
+        },
+        {
+            "timestamp": "20250716145000",
+            "price": 36500.0,
+            "rsi": 30.961446669517585,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9746350.0
+        },
+        {
+            "timestamp": "20250716150000",
+            "price": 36550.0,
+            "rsi": 32.792122279707684,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9759700.0
+        },
+        {
+            "timestamp": "20250716151000",
+            "price": 36600.0,
+            "rsi": 34.65805697956968,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9773050.0
+        },
+        {
+            "timestamp": "20250716153000",
+            "price": 36800.0,
+            "rsi": 41.63798884908701,
+            "capital": 850.0,
+            "shares": 267.0,
+            "portfolio_value": 9826450.0
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "stock_code": "236030",
+    "date": "20250714",
+    "rsi_period": 14,
+    "data_count": 1,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": false
+    },
+    "data": [
+        {
+            "localDateTime": "20250714145000",
+            "currentPrice": 900.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

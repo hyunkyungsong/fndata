@@ -1,0 +1,31 @@
+{
+    "stock_code": "413300",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721090000",
+            "currentPrice": 2345.0,
+            "rsi": 44.8815736651947,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721133000",
+            "currentPrice": 2330.0,
+            "rsi": 37.315463811651135,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721134000",
+            "currentPrice": 1995.0,
+            "rsi": 44.92624616308266,
+            "rsi_period": 14
+        }
+    ]
+}

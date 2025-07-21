@@ -1,0 +1,73 @@
+{
+    "stock_code": "464440",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 2130.0,
+            "rsi": 64.56953642384106,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718102000",
+            "currentPrice": 2127.0,
+            "rsi": 64.56953642384106,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718103000",
+            "currentPrice": 2127.0,
+            "rsi": 58.300605031313026,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 2125.0,
+            "rsi": 66.94173594643755,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718105000",
+            "currentPrice": 2130.0,
+            "rsi": 54.728308886038405,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718120000",
+            "currentPrice": 2125.0,
+            "rsi": 54.728308886038405,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718122000",
+            "currentPrice": 2125.0,
+            "rsi": 62.63470178367844,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718123000",
+            "currentPrice": 2130.0,
+            "rsi": 52.71938309447175,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718134000",
+            "currentPrice": 2125.0,
+            "rsi": 59.60582772807264,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718145000",
+            "currentPrice": 2130.0,
+            "rsi": 59.60582772807264,
+            "rsi_period": 14
+        }
+    ]
+}

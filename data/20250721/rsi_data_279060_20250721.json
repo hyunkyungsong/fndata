@@ -1,0 +1,61 @@
+{
+    "stock_code": "279060",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721091000",
+            "currentPrice": 1400.0,
+            "rsi": 48.472294148109796,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721113000",
+            "currentPrice": 1399.0,
+            "rsi": 47.72700529515592,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721114000",
+            "currentPrice": 1395.0,
+            "rsi": 47.33511082383992,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721121000",
+            "currentPrice": 1393.0,
+            "rsi": 33.542690514627196,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721122000",
+            "currentPrice": 1300.0,
+            "rsi": 49.28540471907965,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721123000",
+            "currentPrice": 1392.0,
+            "rsi": 49.28540471907966,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721125000",
+            "currentPrice": 1392.0,
+            "rsi": 49.28540471907966,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721130000",
+            "currentPrice": 1392.0,
+            "rsi": 49.28540471907966,
+            "rsi_period": 14
+        }
+    ]
+}

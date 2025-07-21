@@ -1,0 +1,30 @@
+{
+    "stock_code": "495900",
+    "date": "20250718",
+    "start_date": "20250718",
+    "end_date": "20250718",
+    "data_count": 2,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250718134000",
+            "currentPrice": 10000.0,
+            "openPrice": 10000.0,
+            "highPrice": 10000.0,
+            "lowPrice": 10000.0,
+            "accumulatedTradingVolume": 100
+        },
+        {
+            "localDateTime": "20250718150000",
+            "currentPrice": 11000.0,
+            "openPrice": 10050.0,
+            "highPrice": 11000.0,
+            "lowPrice": 10050.0,
+            "accumulatedTradingVolume": 102
+        }
+    ]
+}

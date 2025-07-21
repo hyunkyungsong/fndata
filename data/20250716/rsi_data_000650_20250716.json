@@ -1,0 +1,73 @@
+{
+    "stock_code": "000650",
+    "date": "20250716",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250716090000",
+            "currentPrice": 43000.0,
+            "rsi": 56.90661478599222,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716095000",
+            "currentPrice": 42300.0,
+            "rsi": 58.72276376146789,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716100000",
+            "currentPrice": 42450.0,
+            "rsi": 58.72276376146789,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716122000",
+            "currentPrice": 42450.0,
+            "rsi": 60.646280673606306,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716123000",
+            "currentPrice": 42600.0,
+            "rsi": 64.7714487680206,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716125000",
+            "currentPrice": 42950.0,
+            "rsi": 64.7714487680206,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716130000",
+            "currentPrice": 42950.0,
+            "rsi": 64.77144876802062,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716143000",
+            "currentPrice": 42950.0,
+            "rsi": 64.77144876802062,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716150000",
+            "currentPrice": 42950.0,
+            "rsi": 65.46700273821057,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250716151000",
+            "currentPrice": 43000.0,
+            "rsi": 66.18598386374208,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "stock_code": "199290",
+    "date": "20250721",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250721142000",
+            "currentPrice": 446.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721150000",
+            "currentPrice": 446.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250721153000",
+            "currentPrice": 447.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

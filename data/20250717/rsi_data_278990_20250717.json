@@ -1,0 +1,37 @@
+{
+    "stock_code": "278990",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717104000",
+            "currentPrice": 2950.0,
+            "rsi": 50.117292225201076,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717105000",
+            "currentPrice": 3150.0,
+            "rsi": 45.517653118561526,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717150000",
+            "currentPrice": 2950.0,
+            "rsi": 49.04315851177081,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717151000",
+            "currentPrice": 3090.0,
+            "rsi": 51.68840580066218,
+            "rsi_period": 14
+        }
+    ]
+}

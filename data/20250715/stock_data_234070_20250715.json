@@ -1,0 +1,38 @@
+{
+    "stock_code": "234070",
+    "date": "20250715",
+    "start_date": "20250715",
+    "end_date": "20250715",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 1040.0,
+            "openPrice": 1040.0,
+            "highPrice": 1040.0,
+            "lowPrice": 1040.0,
+            "accumulatedTradingVolume": 1
+        },
+        {
+            "localDateTime": "20250715115000",
+            "currentPrice": 990.0,
+            "openPrice": 990.0,
+            "highPrice": 990.0,
+            "lowPrice": 990.0,
+            "accumulatedTradingVolume": 2
+        },
+        {
+            "localDateTime": "20250715120000",
+            "currentPrice": 1040.0,
+            "openPrice": 1040.0,
+            "highPrice": 1040.0,
+            "lowPrice": 1040.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

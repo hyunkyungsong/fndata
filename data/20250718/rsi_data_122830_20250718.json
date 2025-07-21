@@ -1,0 +1,73 @@
+{
+    "stock_code": "122830",
+    "date": "20250718",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250718090000",
+            "currentPrice": 2400.0,
+            "rsi": 24.007386888273302,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718092000",
+            "currentPrice": 2380.0,
+            "rsi": 21.87560675684422,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718093000",
+            "currentPrice": 2345.0,
+            "rsi": 19.24635243514102,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718095000",
+            "currentPrice": 2295.0,
+            "rsi": 18.760688406451578,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718100000",
+            "currentPrice": 2285.0,
+            "rsi": 18.760688406451578,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718101000",
+            "currentPrice": 2285.0,
+            "rsi": 18.227257470261947,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718104000",
+            "currentPrice": 2275.0,
+            "rsi": 17.426826862390485,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718114000",
+            "currentPrice": 2260.0,
+            "rsi": 16.639894145305675,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718141000",
+            "currentPrice": 2245.0,
+            "rsi": 15.62666207832828,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250718143000",
+            "currentPrice": 2225.0,
+            "rsi": 15.62666207832828,
+            "rsi_period": 14
+        }
+    ]
+}

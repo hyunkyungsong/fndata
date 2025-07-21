@@ -1,0 +1,31 @@
+{
+    "stock_code": "012205",
+    "date": "20250717",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250717090000",
+            "currentPrice": 3640.0,
+            "rsi": 56.934306569343065,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717140000",
+            "currentPrice": 3635.0,
+            "rsi": 56.934306569343065,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250717150000",
+            "currentPrice": 3635.0,
+            "rsi": 59.34352701325179,
+            "rsi_period": 14
+        }
+    ]
+}

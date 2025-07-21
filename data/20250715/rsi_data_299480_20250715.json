@@ -1,0 +1,73 @@
+{
+    "stock_code": "299480",
+    "date": "20250715",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250715090000",
+            "currentPrice": 361.0,
+            "rsi": 54.90196078431373,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715091000",
+            "currentPrice": 361.0,
+            "rsi": 55.30848299491802,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715092000",
+            "currentPrice": 363.0,
+            "rsi": 60.98902032112975,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715093000",
+            "currentPrice": 393.0,
+            "rsi": 53.861996719577135,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715094000",
+            "currentPrice": 364.0,
+            "rsi": 58.86070817133372,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715095000",
+            "currentPrice": 392.0,
+            "rsi": 58.86070817133372,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715100000",
+            "currentPrice": 392.0,
+            "rsi": 58.86070817133371,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715102000",
+            "currentPrice": 392.0,
+            "rsi": 50.13776980237961,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715103000",
+            "currentPrice": 356.0,
+            "rsi": 56.669027988062155,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250715105000",
+            "currentPrice": 390.0,
+            "rsi": 56.20267165859067,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "stock_code": "270210",
+    "date": "20250721",
+    "start_date": "20250721",
+    "end_date": "20250721",
+    "data_count": 2,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250721090000",
+            "currentPrice": 25950.0,
+            "openPrice": 24000.0,
+            "highPrice": 25950.0,
+            "lowPrice": 24000.0,
+            "accumulatedTradingVolume": 2
+        },
+        {
+            "localDateTime": "20250721153000",
+            "currentPrice": 25900.0,
+            "openPrice": 25900.0,
+            "highPrice": 25900.0,
+            "lowPrice": 25900.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}
