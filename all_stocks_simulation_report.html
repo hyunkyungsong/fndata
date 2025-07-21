@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전체 주식 RSI 시뮬레이션 결과 보고서1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .card .label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .results-table th,
+        .results-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .results-table th {
+            background-color: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .results-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .results-table tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .profit-positive {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .profit-negative {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .profit-neutral {
+            color: #6c757d;
+            font-weight: bold;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #ddd;
+            margin-top: 30px;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>전체 주식 RSI 시뮬레이션 결과</h1>
+            <p>시뮬레이션 기간: 20250711 ~ 20250718</p>
+            <p>생성일: 2025년 07월 20일 11:25:07</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="card">
+                <h3>총 종목 수</h3>
+                <div class="value">2,874</div>
+                <div class="label">분석 대상 종목</div>
+            </div>
+            <div class="card">
+                <h3>성공 종목</h3>
+                <div class="value">2,755</div>
+                <div class="label">시뮬레이션 완료</div>
+            </div>
+            <div class="card">
+                <h3>실패 종목</h3>
+                <div class="value">119</div>
+                <div class="label">시뮬레이션 실패</div>
+            </div>
+            <div class="card">
+                <h3>총 수익</h3>
+                <div class="value">587,876,293원</div>
+                <div class="label">전체 종목 합계</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>수익률 통계</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">2,515</div>
+                    <div class="stat-label">수익 종목</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">손실 종목</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">240</div>
+                    <div class="stat-label">무손익 종목</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2.13%</div>
+                    <div class="stat-label">평균 수익률</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">43</div>
+                    <div class="stat-label">고수익 종목 (10%↑)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">1,794</div>
+                    <div class="stat-label">중수익 종목 (1-10%)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">678</div>
+                    <div class="stat-label">저수익 종목 (0-1%)</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>상위 10개 수익 종목</h2>
+            <div class="note">
+                <strong>💡 팁:</strong> 종목명을 클릭하면 해당 종목의 상세 분석 보고서를 볼 수 있습니다.
+            </div>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>종목코드</th>
+                        <th>종목명</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>매매횟수</th>
+                        <th>매수횟수</th>
+                        <th>매도횟수</th>
+                        <th>최적 RSI 설정</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>317690</td>
+                        <td><a href="stock_317690_퀀타매트릭스.html" style="color: #667eea; text-decoration: none; font-weight: bold;">퀀타매트릭스</a></td>
+                        <td class="profit-positive">3,357,200원</td>
+                        <td class="profit-positive">33.57%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 35, 과매수: 74</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>294570</td>
+                        <td><a href="stock_294570_쿠콘.html" style="color: #667eea; text-decoration: none; font-weight: bold;">쿠콘</a></td>
+                        <td class="profit-positive">2,843,550원</td>
+                        <td class="profit-positive">28.44%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 25, 과매수: 75</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>227420</td>
+                        <td><a href="stock_227420_도부.html" style="color: #667eea; text-decoration: none; font-weight: bold;">도부</a></td>
+                        <td class="profit-positive">2,376,696원</td>
+                        <td class="profit-positive">23.77%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>299480</td>
+                        <td><a href="stock_299480_지앤이헬스케어.html" style="color: #667eea; text-decoration: none; font-weight: bold;">지앤이헬스케어</a></td>
+                        <td class="profit-positive">2,261,440원</td>
+                        <td class="profit-positive">22.61%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 35, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>203450</td>
+                        <td><a href="stock_203450_유니온바이오메트릭스.html" style="color: #667eea; text-decoration: none; font-weight: bold;">유니온바이오메트릭스</a></td>
+                        <td class="profit-positive">2,189,025원</td>
+                        <td class="profit-positive">21.89%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>009070</td>
+                        <td><a href="stock_009070_KCTC.html" style="color: #667eea; text-decoration: none; font-weight: bold;">KCTC</a></td>
+                        <td class="profit-positive">2,151,020원</td>
+                        <td class="profit-positive">21.51%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 25, 과매수: 74</td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>050760</td>
+                        <td><a href="stock_050760_에스폴리텍.html" style="color: #667eea; text-decoration: none; font-weight: bold;">에스폴리텍</a></td>
+                        <td class="profit-positive">2,149,998원</td>
+                        <td class="profit-positive">21.50%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 31, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>035080</td>
+                        <td><a href="stock_035080_그래디언트.html" style="color: #667eea; text-decoration: none; font-weight: bold;">그래디언트</a></td>
+                        <td class="profit-positive">1,933,800원</td>
+                        <td class="profit-positive">19.34%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 35, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>234340</td>
+                        <td><a href="stock_234340_헥토파이낸셜.html" style="color: #667eea; text-decoration: none; font-weight: bold;">헥토파이낸셜</a></td>
+                        <td class="profit-positive">1,909,500원</td>
+                        <td class="profit-positive">19.10%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>129260</td>
+                        <td><a href="stock_129260_인터지스.html" style="color: #667eea; text-decoration: none; font-weight: bold;">인터지스</a></td>
+                        <td class="profit-positive">1,884,575원</td>
+                        <td class="profit-positive">18.85%</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>과매도: 26, 과매수: 65</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>하위 10개 수익 종목</h2>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>순위</th>
+                        <th>종목코드</th>
+                        <th>종목명</th>
+                        <th>수익</th>
+                        <th>수익률</th>
+                        <th>매매횟수</th>
+                        <th>매수횟수</th>
+                        <th>매도횟수</th>
+                        <th>최적 RSI 설정</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>2746</td>
+                        <td>001465</td>
+                        <td>BYC우</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2747</td>
+                        <td>477760</td>
+                        <td>DB금융스팩12호</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2748</td>
+                        <td>290120</td>
+                        <td>DH오토리드</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2749</td>
+                        <td>278990</td>
+                        <td>EMB</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2750</td>
+                        <td>442770</td>
+                        <td>IBKS제21호스팩</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2751</td>
+                        <td>001065</td>
+                        <td>JW중외제약우</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2752</td>
+                        <td>035900</td>
+                        <td>JYP Ent.</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2753</td>
+                        <td>492220</td>
+                        <td>KB제31호스팩</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2754</td>
+                        <td>002380</td>
+                        <td>KCC</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                    <tr>
+                        <td>2755</td>
+                        <td>112190</td>
+                        <td>KC산업</td>
+                        <td class="profit-neutral">0원</td>
+                        <td class="profit-neutral">0.00%</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>과매도: 25, 과매수: 65</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 RSI 시뮬레이션 분석 시스템</p>
+            <p>이 보고서는 자동으로 생성되었습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
