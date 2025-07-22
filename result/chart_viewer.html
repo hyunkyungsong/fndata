@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RSI 시뮬레이션 차트 뷰어</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Malgun Gothic', 'Arial', sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.08); padding: 24px; }
+        h1 { text-align: center; margin-bottom: 24px; }
+        .chart-block { margin-bottom: 40px; }
+        @media (max-width: 600px) {
+            .container { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>RSI 시뮬레이션 차트 뷰어</h1>
+    <div id="meta"></div>
+    <div class="chart-block">
+        <canvas id="priceChart"></canvas>
+    </div>
+    <div class="chart-block">
+        <canvas id="rsiChart"></canvas>
+    </div>
+    <div class="chart-block">
+        <canvas id="portfolioChart"></canvas>
+    </div>
+</div>
+<script>
+function getQueryParam(name) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name);
+}
+const stockFile = getQueryParam('stock');
+const rsiFile = getQueryParam('rsi');
+
+if (!stockFile || !rsiFile) {
+    document.getElementById('meta').innerHTML = '<b style="color:red">stock, rsi 파라미터가 필요합니다.</b>';
+} else {
+    Promise.all([
+        fetch('data/일자/' + stockFile).then(res => res.json()),
+        fetch('data/일자/' + rsiFile).then(res => res.json())
+    ]).then(([stockData, rsiData]) => {
+        renderCharts(stockData, rsiData);
+    }).catch(err => {
+        document.getElementById('meta').innerHTML = '<b style="color:red">JSON 파일을 불러올 수 없습니다.</b>';
+    });
+}
+
+function renderCharts(stockData, rsiData) {
+    // 메타 정보 표시 (stockData, rsiData에서 종목코드, 날짜 등 활용)
+    document.getElementById('meta').innerHTML = `
+        <div style="text-align:center; margin-bottom:20px;">
+            <b>주가 종목코드:</b> ${stockData.stock_code} &nbsp;|
+            <b>RSI 종목코드:</b> ${rsiData.stock_code} &nbsp;|
+            <b>거래일자:</b> ${stockData.date || rsiData.date}
+        </div>
+    `;
+    // 주가 데이터 준비
+    const stockArr = stockData.data;
+    const priceLabels = stockArr.map(x => x.localDateTime);
+    const prices = stockArr.map(x => x.currentPrice);
+
+    // RSI 데이터 준비
+    const rsiArr = rsiData.data;
+    const rsiLabels = rsiArr.map(x => x.localDateTime);
+    const rsis = rsiArr.map(x => x.rsi);
+
+    // 주가 차트
+    new Chart(document.getElementById('priceChart').getContext('2d'), {
+        type: 'line',
+        data: {
+            labels: priceLabels,
+            datasets: [
+                { label: '주가', data: prices, borderColor: '#1976d2', backgroundColor: 'rgba(25,118,210,0.08)', fill: true, pointRadius: 0 }
+            ]
+        },
+        options: { responsive: true, plugins: { legend: { display: true } }, scales: { x: { display: false } } }
+    });
+    // RSI 차트
+    new Chart(document.getElementById('rsiChart').getContext('2d'), {
+        type: 'line',
+        data: { labels: rsiLabels, datasets: [
+            { label: 'RSI', data: rsis, borderColor: '#8e24aa', backgroundColor: 'rgba(142,36,170,0.08)', fill: true, pointRadius: 0 },
+        ]},
+        options: {
+            responsive: true,
+            plugins: { legend: { display: true } },
+            scales: {
+                y: { min: 0, max: 100, grid: { color: '#eee' } },
+                x: { display: false }
+            },
+            elements: { point: { radius: 0 } }
+        }
+    });
+    // 포트폴리오 차트 숨김 처리
+    document.getElementById('portfolioChart').parentElement.style.display = 'none';
+}
+</script>
+</body>
+</html> 
