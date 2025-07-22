@@ -1,0 +1,73 @@
+{
+    "stock_code": "474930",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 10,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 2100.0,
+            "rsi": 66.08695652173913,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722091000",
+            "currentPrice": 2135.0,
+            "rsi": 67.50694296090579,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722093000",
+            "currentPrice": 2140.0,
+            "rsi": 64.59424186675471,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722094000",
+            "currentPrice": 2135.0,
+            "rsi": 61.72609766556438,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722103000",
+            "currentPrice": 2130.0,
+            "rsi": 58.90917576181839,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722111000",
+            "currentPrice": 2125.0,
+            "rsi": 58.90917576181838,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722112000",
+            "currentPrice": 2125.0,
+            "rsi": 60.97466073224888,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722123000",
+            "currentPrice": 2130.0,
+            "rsi": 57.84342427708408,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722135000",
+            "currentPrice": 2125.0,
+            "rsi": 54.812131753295205,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722144000",
+            "currentPrice": 2120.0,
+            "rsi": 54.812131753295205,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "stock_code": "446750",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 6,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722101000",
+            "currentPrice": 2100.0,
+            "rsi": 40.880503144654085,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722102000",
+            "currentPrice": 2085.0,
+            "rsi": 50.305002033346895,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722114000",
+            "currentPrice": 2095.0,
+            "rsi": 42.93418769189695,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722141000",
+            "currentPrice": 2085.0,
+            "rsi": 50.71157806604736,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722145000",
+            "currentPrice": 2095.0,
+            "rsi": 54.08135856511158,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722150000",
+            "currentPrice": 2100.0,
+            "rsi": 54.08135856511158,
+            "rsi_period": 14
+        }
+    ]
+}

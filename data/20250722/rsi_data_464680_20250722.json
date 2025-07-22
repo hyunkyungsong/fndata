@@ -1,0 +1,61 @@
+{
+    "stock_code": "464680",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 8,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 2020.0,
+            "rsi": 40.0,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722100000",
+            "currentPrice": 2020.0,
+            "rsi": 39.99999999999999,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722102000",
+            "currentPrice": 2020.0,
+            "rsi": 34.786326139620314,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722111000",
+            "currentPrice": 2017.0,
+            "rsi": 42.81349027917662,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722123000",
+            "currentPrice": 2020.0,
+            "rsi": 42.81349027917661,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722133000",
+            "currentPrice": 2020.0,
+            "rsi": 42.81349027917661,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722140000",
+            "currentPrice": 2020.0,
+            "rsi": 34.080992085160446,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722142000",
+            "currentPrice": 2015.0,
+            "rsi": 45.95277516850232,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "stock_code": "442900",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 3,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722091000",
+            "currentPrice": 10330.0,
+            "rsi": 54.54545454545455,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722092000",
+            "currentPrice": 10330.0,
+            "rsi": 62.46112838738339,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722102000",
+            "currentPrice": 10340.0,
+            "rsi": 57.106258006061175,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "stock_code": "093510",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 6,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 1691.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722100000",
+            "currentPrice": 1500.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722111000",
+            "currentPrice": 1253.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722115000",
+            "currentPrice": 1500.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722130000",
+            "currentPrice": 1253.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722131000",
+            "currentPrice": 1450.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

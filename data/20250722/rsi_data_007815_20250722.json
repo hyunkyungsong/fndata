@@ -1,0 +1,37 @@
+{
+    "stock_code": "007815",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 4,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 6200.0,
+            "rsi": 40.625,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722101000",
+            "currentPrice": 6200.0,
+            "rsi": 34.392611145898556,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722144000",
+            "currentPrice": 6100.0,
+            "rsi": 42.88514760147602,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722150000",
+            "currentPrice": 6190.0,
+            "rsi": 43.75631301099655,
+            "rsi_period": 14
+        }
+    ]
+}

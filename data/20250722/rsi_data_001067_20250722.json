@@ -1,0 +1,43 @@
+{
+    "stock_code": "001067",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 5,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 62600.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722110000",
+            "currentPrice": 62200.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722143000",
+            "currentPrice": 62300.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722150000",
+            "currentPrice": 62300.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722153000",
+            "currentPrice": 62900.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

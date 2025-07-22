@@ -1,0 +1,55 @@
+{
+    "stock_code": "457940",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 7,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 2085.0,
+            "rsi": 50.0,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722091000",
+            "currentPrice": 2085.0,
+            "rsi": 46.973440395305744,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722100000",
+            "currentPrice": 2080.0,
+            "rsi": 50.21856461037513,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722101000",
+            "currentPrice": 2085.0,
+            "rsi": 47.11351821152082,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722104000",
+            "currentPrice": 2080.0,
+            "rsi": 44.17222857172043,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722142000",
+            "currentPrice": 2075.0,
+            "rsi": 47.68919591617448,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722145000",
+            "currentPrice": 2080.0,
+            "rsi": 51.012628437514124,
+            "rsi_period": 14
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "stock_code": "191600",
+    "date": "20250722",
+    "start_date": "20250722",
+    "end_date": "20250722",
+    "data_count": 2,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250722112000",
+            "currentPrice": 7500.0,
+            "openPrice": 7500.0,
+            "highPrice": 7500.0,
+            "lowPrice": 7500.0,
+            "accumulatedTradingVolume": 100
+        },
+        {
+            "localDateTime": "20250722113000",
+            "currentPrice": 7380.0,
+            "openPrice": 7390.0,
+            "highPrice": 7390.0,
+            "lowPrice": 7380.0,
+            "accumulatedTradingVolume": 240
+        }
+    ]
+}

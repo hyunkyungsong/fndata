@@ -1,0 +1,25 @@
+{
+    "stock_code": "402420",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 2,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722092000",
+            "currentPrice": 3000.0,
+            "rsi": null,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722093000",
+            "currentPrice": 3200.0,
+            "rsi": null,
+            "rsi_period": 14
+        }
+    ]
+}

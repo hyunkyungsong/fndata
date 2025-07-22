@@ -1,0 +1,38 @@
+{
+    "stock_code": "332190",
+    "date": "20250722",
+    "start_date": "20250722",
+    "end_date": "20250722",
+    "data_count": 3,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250722100000",
+            "currentPrice": 4785.0,
+            "openPrice": 4785.0,
+            "highPrice": 4785.0,
+            "lowPrice": 4785.0,
+            "accumulatedTradingVolume": 10
+        },
+        {
+            "localDateTime": "20250722133000",
+            "currentPrice": 4690.0,
+            "openPrice": 4690.0,
+            "highPrice": 4690.0,
+            "lowPrice": 4690.0,
+            "accumulatedTradingVolume": 215
+        },
+        {
+            "localDateTime": "20250722135000",
+            "currentPrice": 4880.0,
+            "openPrice": 4880.0,
+            "highPrice": 4880.0,
+            "lowPrice": 4880.0,
+            "accumulatedTradingVolume": 1
+        }
+    ]
+}

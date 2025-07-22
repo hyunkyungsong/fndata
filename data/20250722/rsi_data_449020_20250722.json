@@ -1,0 +1,43 @@
+{
+    "stock_code": "449020",
+    "date": "20250722",
+    "rsi_period": 14,
+    "data_count": 5,
+    "calculation_settings": {
+        "rsi_period": 14,
+        "calculation_method": "exponential_moving_average",
+        "previous_data_used": true
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 2080.0,
+            "rsi": 29.411764705882362,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722094000",
+            "currentPrice": 2080.0,
+            "rsi": 29.411764705882362,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722104000",
+            "currentPrice": 2080.0,
+            "rsi": 38.45507388472582,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722125000",
+            "currentPrice": 2082.0,
+            "rsi": 38.45507388472583,
+            "rsi_period": 14
+        },
+        {
+            "localDateTime": "20250722132000",
+            "currentPrice": 2082.0,
+            "rsi": 33.48049530607024,
+            "rsi_period": 14
+        }
+    ]
+}

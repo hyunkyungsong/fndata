@@ -1,0 +1,54 @@
+{
+    "stock_code": "251280",
+    "date": "20250722",
+    "start_date": "20250722",
+    "end_date": "20250722",
+    "data_count": 5,
+    "collection_settings": {
+        "start_time": "09:00",
+        "end_time": "15:30",
+        "interval_minutes": 10
+    },
+    "data": [
+        {
+            "localDateTime": "20250722090000",
+            "currentPrice": 4150.0,
+            "openPrice": 4150.0,
+            "highPrice": 4150.0,
+            "lowPrice": 4010.0,
+            "accumulatedTradingVolume": 202
+        },
+        {
+            "localDateTime": "20250722115000",
+            "currentPrice": 4020.0,
+            "openPrice": 4020.0,
+            "highPrice": 4020.0,
+            "lowPrice": 4020.0,
+            "accumulatedTradingVolume": 1
+        },
+        {
+            "localDateTime": "20250722120000",
+            "currentPrice": 4125.0,
+            "openPrice": 4020.0,
+            "highPrice": 4125.0,
+            "lowPrice": 4020.0,
+            "accumulatedTradingVolume": 2
+        },
+        {
+            "localDateTime": "20250722132000",
+            "currentPrice": 4000.0,
+            "openPrice": 4030.0,
+            "highPrice": 4030.0,
+            "lowPrice": 4000.0,
+            "accumulatedTradingVolume": 555
+        },
+        {
+            "localDateTime": "20250722133000",
+            "currentPrice": 4095.0,
+            "openPrice": 4000.0,
+            "highPrice": 4095.0,
+            "lowPrice": 4000.0,
+            "accumulatedTradingVolume": 2
+        }
+    ]
+}
