@@ -15,8 +15,8 @@ def main(date_str=None):
         if len(sys.argv) > 1:
             date_str = sys.argv[1]
         else:
-            date_str = '20250721'  # 기본값
-    input_json = f'data/all_stocks_simulation_results_{date_str}_{date_str}_{date_str}_230413.json'
+            date_str = ''  # 기본값
+    input_json = f'data/all_stocks_simulation_results_{date_str}_{date_str}.json'
     output_html = f'result/all_stocks_simulation_report_{date_str}.html'
     summary, results = parse_large_json(input_json)
     total_stocks = int(summary.get('total_stocks', 0))

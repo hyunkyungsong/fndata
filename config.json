@@ -23,6 +23,13 @@
         "show_error_details": true,
         "show_progress": true
     },
+    "trade_settings": {
+        "buy_price_type": "open",
+        "sell_price_type": "open",
+        "slippage": 0.001,
+        "buy_execution_timing": "next",
+        "sell_execution_timing": "next"
+    },
     "headers": {
         "accept": "*/*",
         "accept-language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7,zh-TW;q=0.6,zh;q=0.5",

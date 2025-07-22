@@ -163,6 +163,11 @@ def analyze_rsi_distribution(rsi_data):
     
     return analysis
 
+# config.json 옵션 로드
+with open('config.json', 'r', encoding='utf-8') as f:
+    config = json.load(f)
+trade_settings = config.get('trade_settings', {})
+
 def simulate_rsi_trading_final(rsi_data, initial_capital=10000000, rsi_oversold=40, rsi_overbought=60):
     """
     최종 RSI 기반 매매 시뮬레이션 (현실적인 기준 사용)
@@ -179,71 +184,126 @@ def simulate_rsi_trading_final(rsi_data, initial_capital=10000000, rsi_oversold=
     data = rsi_data['data']
     stock_code = rsi_data['stock_code']
     date = rsi_data['date']
-    
+
+    # 10분 가격 데이터 로드 (openPrice 사용)
+    stock_data_file = f"data/{date}/stock_data_{stock_code}_{date}.json"
+    if not os.path.exists(stock_data_file):
+        raise FileNotFoundError(f"10분 가격 데이터 파일을 찾을 수 없습니다: {stock_data_file}")
+    with open(stock_data_file, 'r', encoding='utf-8') as f:
+        stock_data_json = json.load(f)
+        stock_data = stock_data_json['data']
+    # localDateTime -> openPrice 매핑
+    open_price_map = {item['localDateTime']: item['openPrice'] for item in stock_data}
+
     # 시뮬레이션 변수 초기화
     capital = initial_capital  # 현금
     shares = 0  # 보유 주식 수
     total_value = initial_capital  # 총 자산가치
     trades = []  # 거래 기록
     portfolio_values = []  # 포트폴리오 가치 기록
-    
+
     # 첫 번째 유효한 RSI 값 찾기
     start_idx = 0
     for i, item in enumerate(data):
         if item['rsi'] is not None:
             start_idx = i
             break
-    
-    # 시뮬레이션 실행
-    for i in range(start_idx, len(data)):
+
+    i = start_idx
+    buy_price_type = trade_settings.get('buy_price_type', 'open')
+    sell_price_type = trade_settings.get('sell_price_type', 'close')
+    slippage = trade_settings.get('slippage', 0.0)
+    buy_execution_timing = trade_settings.get('buy_execution_timing', 'next')
+    sell_execution_timing = trade_settings.get('sell_execution_timing', 'next')
+
+    while i < len(data):
         item = data[i]
-        current_price = item['currentPrice']
         rsi = item['rsi']
         timestamp = item['localDateTime']
-        
+        current_price = item['currentPrice']
+
         if rsi is None:
+            i += 1
             continue
-        
+
         # 매수 신호 (과매도)
         if rsi < rsi_oversold and capital > 0:
-            # 전액 매수
-            shares_to_buy = capital // current_price
-            if shares_to_buy > 0:
-                cost = shares_to_buy * current_price
-                capital -= cost
-                shares += shares_to_buy
-                
-                trades.append({
-                    'timestamp': timestamp,
-                    'action': 'BUY',
-                    'price': current_price,
-                    'shares': shares_to_buy,
-                    'cost': cost,
-                    'rsi': rsi,
-                    'capital': capital,
-                    'shares_held': shares
-                })
-        
+            # 매수 캔들 인덱스 결정
+            buy_idx = i if buy_execution_timing == 'current' else i + 1
+            if buy_idx < len(data):
+                buy_item = data[buy_idx]
+                buy_timestamp = buy_item['localDateTime']
+                # 가격 타입 결정
+                if buy_price_type == 'open':
+                    buy_price = open_price_map.get(buy_timestamp, buy_item.get('currentPrice'))
+                elif buy_price_type == 'close':
+                    buy_price = buy_item.get('currentPrice')
+                elif buy_price_type == 'high':
+                    buy_price = buy_item.get('highPrice', buy_item.get('currentPrice'))
+                elif buy_price_type == 'low':
+                    buy_price = buy_item.get('lowPrice', buy_item.get('currentPrice'))
+                else:
+                    buy_price = buy_item.get('currentPrice')
+                # 슬리피지 적용
+                buy_price = buy_price * (1 + slippage)
+                shares_to_buy = capital // buy_price
+                if shares_to_buy > 0:
+                    cost = shares_to_buy * buy_price
+                    capital -= cost
+                    shares += shares_to_buy
+                    trades.append({
+                        'timestamp': buy_timestamp,
+                        'action': 'BUY',
+                        'price': buy_price,
+                        'shares': shares_to_buy,
+                        'cost': cost,
+                        'rsi': rsi,
+                        'capital': capital,
+                        'shares_held': shares
+                    })
+                i = buy_idx  # 신호 발생 시점에 따라 인덱스 이동
+                continue
+            else:
+                break
+
         # 매도 신호 (과매수)
         elif rsi > rsi_overbought and shares > 0:
-            # 전량 매도
-            revenue = shares * current_price
-            capital += revenue
-            
-            trades.append({
-                'timestamp': timestamp,
-                'action': 'SELL',
-                'price': current_price,
-                'shares': shares,
-                'revenue': revenue,
-                'rsi': rsi,
-                'capital': capital,
-                'shares_held': 0
-            })
-            
-            shares = 0
-        
-        # 현재 포트폴리오 가치 계산
+            sell_idx = i if sell_execution_timing == 'current' else i + 1
+            if sell_idx < len(data):
+                sell_item = data[sell_idx]
+                sell_timestamp = sell_item['localDateTime']
+                # 가격 타입 결정
+                if sell_price_type == 'open':
+                    sell_price = open_price_map.get(sell_timestamp, sell_item.get('currentPrice'))
+                elif sell_price_type == 'close':
+                    sell_price = sell_item.get('currentPrice')
+                elif sell_price_type == 'high':
+                    sell_price = sell_item.get('highPrice', sell_item.get('currentPrice'))
+                elif sell_price_type == 'low':
+                    sell_price = sell_item.get('lowPrice', sell_item.get('currentPrice'))
+                else:
+                    sell_price = sell_item.get('currentPrice')
+                # 슬리피지 적용
+                sell_price = sell_price * (1 - slippage)
+                revenue = shares * sell_price
+                capital += revenue
+                trades.append({
+                    'timestamp': sell_timestamp,
+                    'action': 'SELL',
+                    'price': sell_price,
+                    'shares': shares,
+                    'revenue': revenue,
+                    'rsi': rsi,
+                    'capital': capital,
+                    'shares_held': 0
+                })
+                shares = 0
+                i = sell_idx  # 신호 발생 시점에 따라 인덱스 이동
+                continue
+            else:
+                break
+
+        # 현재 포트폴리오 가치 계산 (현재 캔들 기준)
         current_portfolio_value = capital + (shares * current_price)
         portfolio_values.append({
             'timestamp': timestamp,
@@ -253,13 +313,13 @@ def simulate_rsi_trading_final(rsi_data, initial_capital=10000000, rsi_oversold=
             'shares': shares,
             'portfolio_value': current_portfolio_value
         })
-    
+        i += 1
+
     # 마지막 거래일 종가로 모든 주식 매도 (청산)
     if shares > 0:
         final_price = data[-1]['currentPrice']
         final_revenue = shares * final_price
         capital += final_revenue
-        
         trades.append({
             'timestamp': data[-1]['localDateTime'],
             'action': 'FINAL_SELL',
@@ -270,25 +330,25 @@ def simulate_rsi_trading_final(rsi_data, initial_capital=10000000, rsi_oversold=
             'capital': capital,
             'shares_held': 0
         })
-    
+
     # 수익률 계산
     final_value = capital
     profit = final_value - initial_capital
     profit_rate = (profit / initial_capital) * 100
-    
+
     # 거래 통계
     buy_trades = [t for t in trades if t['action'] == 'BUY']
     sell_trades = [t for t in trades if t['action'] in ['SELL', 'FINAL_SELL']]
-    
+
     # 평균 매수/매도 가격
     avg_buy_price = np.mean([t['price'] for t in buy_trades]) if buy_trades else 0
     avg_sell_price = np.mean([t['price'] for t in sell_trades]) if sell_trades else 0
-    
+
     # 최대/최소 포트폴리오 가치
     portfolio_values_list = [pv['portfolio_value'] for pv in portfolio_values]
     max_portfolio_value = max(portfolio_values_list) if portfolio_values_list else initial_capital
     min_portfolio_value = min(portfolio_values_list) if portfolio_values_list else initial_capital
-    
+
     result = {
         'stock_code': stock_code,
         'date': date,
@@ -310,7 +370,7 @@ def simulate_rsi_trading_final(rsi_data, initial_capital=10000000, rsi_oversold=
         'trades': trades,
         'portfolio_values': portfolio_values
     }
-    
+
     return result
 
 def create_final_trading_report(simulation_result, rsi_analysis):
@@ -507,190 +567,7 @@ def create_html_report(auto_results_data, rsi_analysis):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSI 자동 시뮬레이션 결과 - {stock_code}</title>
-    <style>
-        body {{
-            font-family: 'Malgun Gothic', 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }}
-        .container {{
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }}
-        .header {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }}
-        .header h1 {{
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }}
-        .header p {{
-            margin: 10px 0 0 0;
-            font-size: 1.2em;
-            opacity: 0.9;
-        }}
-        .content {{
-            padding: 30px;
-        }}
-        .summary-section {{
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }}
-        .summary-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }}
-        .summary-item {{
-            background-color: white;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 4px solid #667eea;
-        }}
-        .summary-item h3 {{
-            margin: 0 0 10px 0;
-            color: #333;
-            font-size: 1.1em;
-        }}
-        .summary-item p {{
-            margin: 0;
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #667eea;
-        }}
-        .best-result {{
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
-        }}
-        .best-result h2 {{
-            margin: 0 0 20px 0;
-            color: #333;
-            font-size: 1.8em;
-        }}
-        .best-result-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }}
-        .best-result-item {{
-            background-color: white;
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-        }}
-        .best-result-item h4 {{
-            margin: 0 0 8px 0;
-            color: #666;
-            font-size: 0.9em;
-        }}
-        .best-result-item p {{
-            margin: 0;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-        }}
-        .results-table {{
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }}
-        .results-table th {{
-            background-color: #667eea;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-        }}
-        .results-table td {{
-            padding: 12px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }}
-        .results-table tr:nth-child(even) {{
-            background-color: #f8f9fa;
-        }}
-        .results-table tr:hover {{
-            background-color: #e3f2fd;
-        }}
-        .profit-positive {{
-            color: #4caf50;
-            font-weight: bold;
-        }}
-        .profit-negative {{
-            color: #f44336;
-            font-weight: bold;
-        }}
-        .rsi-analysis {{
-            background-color: #e8f5e8;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }}
-        .rsi-analysis h3 {{
-            margin: 0 0 15px 0;
-            color: #2e7d32;
-        }}
-        .rsi-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-        }}
-        .rsi-item {{
-            background-color: white;
-            padding: 12px;
-            border-radius: 6px;
-            text-align: center;
-        }}
-        .rsi-item h4 {{
-            margin: 0 0 8px 0;
-            color: #666;
-            font-size: 0.9em;
-        }}
-        .rsi-item p {{
-            margin: 0;
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #2e7d32;
-        }}
-        .footer {{
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 30px;
-        }}
-        @media (max-width: 768px) {{
-            .summary-grid, .best-result-grid, .rsi-grid {{
-                grid-template-columns: 1fr;
-            }}
-            .results-table {{
-                font-size: 0.9em;
-            }}
-            .results-table th, .results-table td {{
-                padding: 8px;
-            }}
-        }}
-    </style>
+    <link rel="stylesheet" href="report_style.css">  <!-- 여기서 경로 수정 -->
 </head>
 <body>
     <div class="container">
@@ -739,7 +616,7 @@ def create_html_report(auto_results_data, rsi_analysis):
                     </div>
                     <div class="best-result-item">
                         <h4>수익금</h4>
-                        <p class="{'profit-positive' if best_result['profit'] > 0 else 'profit-negative'}">{best_result['profit']:,}원</p>
+                        <p class="{'profit-positive' if best_result['profit'] > 0 else 'profit-negative'}">{int(best_result['profit']):,}원</p>
                     </div>
                     <div class="best-result-item">
                         <h4>총 거래횟수</h4>
@@ -833,13 +710,11 @@ def create_html_report(auto_results_data, rsi_analysis):
     
     for i, result in enumerate(results, 1):
         profit_class = "profit-positive" if result['profit_rate'] > 0 else "profit-negative"
-        
-        # 차트 링크 생성
-        chart_link = ""
-        if 'chart_filename' in result and result['chart_filename']:
-            chart_link = f'<a href="charts/{result["chart_filename"]}" target="_blank" style="color: #667eea; text-decoration: none; font-weight: bold;">📊 차트보기</a>'
+        # chart_link 필드 사용
+        if 'chart_link' in result and result['chart_link']:
+            chart_link = f'<a href="{result["chart_link"]}" target="_blank" style="color: #667eea; text-decoration: none; font-weight: bold;">📊 차트보기</a>'
         else:
-            chart_link = '<span style="color: #999;">차트 없음</span>'
+            chart_link = ""
         
         html_content += f"""
                     <tr>
@@ -847,7 +722,7 @@ def create_html_report(auto_results_data, rsi_analysis):
                         <td>{result['oversold']}</td>
                         <td>{result['overbought']}</td>
                         <td class="{profit_class}">{result['profit_rate']:.2f}%</td>
-                        <td class="{profit_class}">{result['profit']:,}원</td>
+                        <td class="{profit_class}">{int(result['profit']):,}원</td>
                         <td>{result['total_trades']}회</td>
                         <td>{result['buy_trades']}회</td>
                         <td>{result['sell_trades']}회</td>
@@ -870,7 +745,8 @@ def create_html_report(auto_results_data, rsi_analysis):
     # 상위 10개 결과의 차트만 표시
     top_results = results[:10]
     for i, result in enumerate(top_results):
-        if 'chart_filename' in result and result['chart_filename']:
+        if 'chart_json_filename' in result and result['chart_json_filename']:
+            json_filename = result['chart_json_filename']
             html_content += f"""
                 <div class="chart-item" style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <h4 style="margin: 0 0 10px 0; color: #333; text-align: center;">
@@ -880,7 +756,7 @@ def create_html_report(auto_results_data, rsi_analysis):
                         수익률: {result['profit_rate']:.2f}%
                     </p>
                     <div style="text-align: center;">
-                        <a href="charts/{result['chart_filename']}" target="_blank" style="display: inline-block; padding: 8px 16px; background: #667eea; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;">
+                        <a href=\"chart_viewer.html?code={stock_code}&date={date}&oversold={result["oversold"]}&overbought={result["overbought"]}\" target=\"_blank\" style=\"display: inline-block; padding: 8px 16px; background: #667eea; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;\">
                             📊 차트보기
                         </a>
                     </div>
@@ -1070,7 +946,7 @@ def main():
         
         # 결과 저장
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        result_filename = f"data/20250721/all_stocks_simulation_results_{start_date}_{end_date}_{timestamp}.json"
+        result_filename = f"./data/all_stocks_simulation_results_{start_date}_{end_date}.json"
         
         final_results = {
             'simulation_period': {
@@ -1153,32 +1029,40 @@ def main():
                     
                     # 차트 생성 및 저장 (--no_charts 옵션이 없을 때만)
                     chart_filename = None
+                    chart_json_filename = None
                     if not args.no_charts:
                         chart_filename = f"rsi_trading_chart_{stock_code}_{date}_oversold{oversold}_overbought{overbought}_{timestamp}.png"
                         chart_path = f"{charts_folder}/{chart_filename}"
-                        
                         try:
                             create_final_trading_chart(report, save_path=chart_path)
-                            chart_files.append({
-                                'oversold': oversold,
-                                'overbought': overbought,
-                                'chart_path': chart_filename,
-                                'profit_rate': simulation_result['profit_rate']
-                            })
                             print(f"  ✅ 차트 생성 완료: {chart_filename}")
                         except Exception as chart_error:
                             print(f"  ⚠️ 차트 생성 실패: {str(chart_error)}")
-                            chart_files.append({
-                                'oversold': oversold,
-                                'overbought': overbought,
-                                'chart_path': None,
-                                'profit_rate': simulation_result['profit_rate']
-                            })
+                            chart_filename = None
+                        # report를 json으로도 저장
+                        if chart_filename:
+                            chart_json_filename = chart_filename.replace('.png', '.json')
+                            chart_json_path = f"{charts_folder}/{chart_json_filename}"
+                            try:
+                                with open(chart_json_path, 'w', encoding='utf-8') as f:
+                                    json.dump(report, f, ensure_ascii=False, indent=4)
+                                print(f"  ✅ 차트 데이터 저장 완료: {chart_json_filename}")
+                            except Exception as json_error:
+                                print(f"  ⚠️ 차트 데이터 저장 실패: {str(json_error)}")
+                                chart_json_filename = None
+                        chart_files.append({
+                            'oversold': oversold,
+                            'overbought': overbought,
+                            'chart_path': chart_filename,
+                            'chart_json': chart_json_filename,
+                            'profit_rate': simulation_result['profit_rate']
+                        })
                     else:
                         chart_files.append({
                             'oversold': oversold,
                             'overbought': overbought,
                             'chart_path': None,
+                            'chart_json': None,
                             'profit_rate': simulation_result['profit_rate']
                         })
                         print(f"  ⏭️ 차트 생성 건너뜀 (--no_charts 옵션)")
@@ -1197,11 +1081,14 @@ def main():
                         'max_profit_rate': simulation_result['max_profit_rate'],
                         'max_loss_rate': simulation_result['max_loss_rate'],
                         'chart_filename': chart_filename,
+                        'chart_json_filename': chart_json_filename,
                         # 매수/매도 거래 가격 및 시간 리스트 추가
                         'buy_prices': [t['price'] for t in simulation_result['trades'] if t['action'] == 'BUY'],
                         'buy_times': [t['timestamp'] for t in simulation_result['trades'] if t['action'] == 'BUY'],
                         'sell_prices': [t['price'] for t in simulation_result['trades'] if t['action'] in ['SELL', 'FINAL_SELL']],
-                        'sell_times': [t['timestamp'] for t in simulation_result['trades'] if t['action'] in ['SELL', 'FINAL_SELL']]
+                        'sell_times': [t['timestamp'] for t in simulation_result['trades'] if t['action'] in ['SELL', 'FINAL_SELL']],
+                        # 차트 링크 추가
+                        'chart_link': f'chart_viewer.html?code={stock_code}&date={date}&oversold={oversold}&overbought={overbought}'
                     }
                     
                     all_results.append(result_summary)
@@ -1235,7 +1122,7 @@ def main():
             print(f"  oversold: {best_result['oversold']}")
             print(f"  overbought: {best_result['overbought']}")
             print(f"  수익률: {best_result['profit_rate']:.2f}%")
-            print(f"  수익금: {best_result['profit']:,}원")
+            print(f"  수익금: {int(best_result['profit']):,}원")
             print(f"  총 거래횟수: {best_result['total_trades']}회")
             print(f"  매수횟수: {best_result['buy_trades']}회")
             print(f"  매도횟수: {best_result['sell_trades']}회")
@@ -1246,10 +1133,10 @@ def main():
         
         # 결과 저장
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        result_folder = "data/20250721"
+        result_folder = "./result"
         os.makedirs(result_folder, exist_ok=True)
         
-        auto_result_filename = f"{result_folder}/rsi_auto_simulation_results_{stock_code}_{date}_{timestamp}.json"
+        auto_result_filename = f"{result_folder}/rsi_auto_simulation_results_{stock_code}_{date}.json"
         
         auto_results_data = {
             'stock_code': stock_code,
@@ -1274,7 +1161,8 @@ def main():
         
         # HTML 보고서 생성 및 저장
         html_content = create_html_report(auto_results_data, rsi_analysis)
-        html_filename = f"{result_folder}/rsi_auto_simulation_report_{stock_code}_{date}_{timestamp}.html"
+        os.makedirs('./result', exist_ok=True)
+        html_filename = f"./result/rsi_auto_simulation_report_{stock_code}_{date}.html"
         with open(html_filename, 'w', encoding='utf-8') as f:
             f.write(html_content)
         print(f"자동 시뮬레이션 HTML 보고서 저장 완료: {html_filename}")

@@ -116,7 +116,7 @@ http://localhost:8000/stock_rsi_chart.html
 
 ```bash
 # 단일 종목, 단일 날짜
-python get_minute10.py 20250722 20250722 005930 --all_stock
+python get_minute10.py 20250722 20250722 005930
 
 # 여러 날짜, 여러 종목
 python get_minute10.py 20250717 20250719 005930 000660
@@ -139,13 +139,13 @@ python calculate_rsi.py --stock_code 005930 --date 20250718
 python calculate_rsi.py --all
 
 # 전일자 데이터 활용 (단일 종목)
-python calculate_rsi_with_previous.py --stock_code 005930 --date 20250721
+python calculate_rsi_with_previous.py --stock_code 005930 --date 20250722
 
 # 전일자 데이터 활용 (전 종목)
 python calculate_rsi_with_previous.py --all
 
 # 전일자 데이터 활용 (전 종목, 특정 날짜)
-python calculate_rsi_with_previous.py --all --date 20250721
+python calculate_rsi_with_previous.py --all --date 20250722
 ```
 
 - `--all` 옵션을 사용하면 전체 종목에 대해 한 번에 실행할 수 있습니다.
@@ -172,8 +172,8 @@ python rsi_trading_simulation_final.py --stock_code 005930 --date 20250718
 # 자동 파라미터 최적화
 python rsi_trading_simulation_final.py --stock_code 005930 --date 20250721 --auto_simulate --no_charts
 
-# 전체 종목
-python rsi_trading_simulation_final.py --all_stocks --date 20250721 --auto_simulate --no_charts
+# 전체 종목 특정일 자동시뮬레이션 (차트저정 건너띔)
+python rsi_trading_simulation_final.py --all_stocks --date 20250722 --auto_simulate --no_charts
 ```
 
 - 결과: data/000660/rsi_auto_simulation_report_000660_20250718_*.html, data/all_stocks_simulation_results_20250711_20250718_*.json 등 생성
@@ -305,7 +305,7 @@ python rsi_trading_simulation_final.py --stock_code 005930 --date 20250718
 ### 3. 자동 최적화/전체 종목 분석
 
 ```bash
-python rsi_trading_simulation_final.py --stock_code 005930 --date 20250718 --auto_simulate
+python rsi_trading_simulation_final.py --stock_code 005930 --date 20250722 --auto_simulate --no_charts
 python rsi_trading_simulation_final.py --all_stocks
 ```
 
@@ -339,3 +339,43 @@ import os
 codes = pd.read_csv('data/data_stock_all_fixed.csv')['code']
 for code in codes:
     os.system(f'python get_minute10.py 20250718 20250718 {code:06d}') 
+
+## 🆕 전체 종목 시뮬레이션 및 통계/HTML 보고서 생성
+
+### 전체 종목 자동 시뮬레이션
+
+```bash
+python rsi_trading_simulation_final.py --all_stocks --date 20250722 --auto_simulate --no_charts
+```
+- 실행 결과: `data/all_stocks_simulation_results_20250722_20250722.json` 생성
+- 성공/실패 종목, 상위/하위 수익률, 전체 통계 등 자동 저장
+
+### 전체 종목 통계/HTML 요약 보고서 생성
+
+```bash
+python generate_report.py 20250722
+```
+- 실행 결과: `result/all_stocks_simulation_report_20250722.html` 생성
+- HTML 보고서에는 전체 종목 통계, 상위/하위 10개 종목, 수익률 분포 등 시각적 요약 제공
+
+> **TIP:** 시뮬레이션이 끝나면 자동으로 JSON 결과가 저장되며, 별도 명령어로 HTML 요약 보고서를 생성할 수 있습니다.
+
+## 📂 주요 결과 파일 예시 (2025년 7월 22일 기준)
+- `data/all_stocks_simulation_results_20250722_20250722.json` : 전체 종목 시뮬레이션 결과 (JSON)
+- `result/all_stocks_simulation_report_20250722.html` : 전체 종목 통계/요약 HTML 보고서
+- `data/005930/rsi_auto_simulation_report_005930_20250722_*.html` : 개별 종목 자동 시뮬레이션 보고서
+- `data/005930/rsi_auto_simulation_results_005930_20250722_*.json` : 개별 종목 자동 시뮬레이션 결과
+
+## 🛠️ 전체 워크플로우 예시 (요약)
+
+1. **데이터 준비**
+    - `python create_stock_json.py` (종목 목록 생성)
+    - `python fix_encoding.py` (인코딩 오류 수정)
+2. **10분 가격 데이터 수집**
+    - `python get_minute10.py 20250722 20250722 --all_stock`
+3. **RSI 계산**
+    - `python calculate_rsi_with_previous.py --all --date 20250722`
+4. **전체 종목 RSI 매매 시뮬레이션**
+    - `python rsi_trading_simulation_final.py --all_stocks --date 20250722 --auto_simulate --no_charts`
+5. **통계/HTML 보고서 생성**
+    - `python generate_report.py 20250722` 

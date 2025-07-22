@@ -71,7 +71,7 @@ def find_previous_data_file(stock_code, current_date, max_lookback=7):
         previous_dt = current_dt - pd.Timedelta(days=i)
         previous_date = previous_dt.strftime('%Y%m%d')
         previous_file = f"stock_data_{stock_code}_{previous_date}.json"
-        previous_path = os.path.join('data', stock_code, previous_file)
+        previous_path = os.path.join('data', previous_date, previous_file)  # <--- 변경
         if os.path.exists(previous_path):
             return previous_path
     print(f"전일자 데이터 파일을 찾을 수 없습니다: {stock_code} {current_date} 기준 {max_lookback}일 내")
@@ -147,11 +147,11 @@ def process_stock_data_with_previous(file_path, rsi_period=14):
         # 출력 파일명 생성
         output_filename = f"rsi_data_{stock_code}_{date}.json"
         
-        # 종목별 폴더 생성
-        stock_folder = f"data/{stock_code}"
-        os.makedirs(stock_folder, exist_ok=True)
+        # 일자별 폴더 생성
+        date_folder = f"data/{date}"
+        os.makedirs(date_folder, exist_ok=True)
         
-        output_path = os.path.join(stock_folder, output_filename)
+        output_path = os.path.join(date_folder, output_filename)
         
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, ensure_ascii=False, indent=4)
@@ -220,22 +220,24 @@ def process_all_stock_data_with_previous(data_dir='data', rsi_period=14, target_
         rsi_period (int): RSI 계산 기간
         target_date (str): 처리할 날짜 (YYYYMMDD) 또는 None
     """
-    # data 디렉토리 내의 모든 종목 폴더 찾기
-    stock_folders = []
+    # data 디렉토리 내의 모든 일자 폴더 찾기
+    date_folders = []
     if os.path.exists(data_dir):
         for item in os.listdir(data_dir):
             item_path = os.path.join(data_dir, item)
             if os.path.isdir(item_path):
-                stock_folders.append(item_path)
+                date_folders.append(item_path)
     
-    if not stock_folders:
-        print("처리할 종목 폴더를 찾을 수 없습니다.")
+    if not date_folders:
+        print("처리할 일자 폴더를 찾을 수 없습니다.")
         return
     
-    # 각 종목 폴더에서 stock_data_*.json 파일들 찾기
+    # 각 일자 폴더에서 stock_data_*.json 파일들 찾기
     stock_files = []
-    for folder in stock_folders:
+    for folder in date_folders:
         if target_date:
+            if os.path.basename(folder) != target_date:
+                continue
             pattern = os.path.join(folder, f'stock_data_*_{target_date}.json')
         else:
             pattern = os.path.join(folder, 'stock_data_*.json')
@@ -326,7 +328,7 @@ def process_specific_stock_date(stock_code, date, rsi_period=14):
         rsi_period (int): RSI 계산 기간
     """
     # 파일 경로 생성
-    file_path = os.path.join('data', stock_code, f'stock_data_{stock_code}_{date}.json')
+    file_path = os.path.join('data', date, f'stock_data_{stock_code}_{date}.json')
     
     if not os.path.exists(file_path):
         print(f"파일을 찾을 수 없습니다: {file_path}")
