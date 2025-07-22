@@ -163,11 +163,11 @@ def save_data_by_date_and_stock(all_data, stock_code, start_date, end_date, conf
     for date_str, day_data in all_data.items():
         filename = f"{config['output_settings']['file_prefix']}_{stock_code}_{date_str}.json"
         
-        # 종목별 폴더 생성
-        stock_folder = os.path.join(data_dir, stock_code)
-        os.makedirs(stock_folder, exist_ok=True)
+        # 날짜별 폴더 생성 (변경)
+        date_folder = os.path.join(data_dir, date_str)
+        os.makedirs(date_folder, exist_ok=True)
         
-        filepath = os.path.join(stock_folder, filename)
+        filepath = os.path.join(date_folder, filename)
         
         # 저장할 데이터 구조
         save_data = {

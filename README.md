@@ -116,10 +116,13 @@ http://localhost:8000/stock_rsi_chart.html
 
 ```bash
 # 단일 종목, 단일 날짜
-python get_minute10.py 20250718 20250718 005930
+python get_minute10.py 20250722 20250722 005930 --all_stock
 
 # 여러 날짜, 여러 종목
 python get_minute10.py 20250717 20250719 005930 000660
+
+# 전체 종목, 단일 날짜
+python get_minute10.py 20250722 20250722 --all_stock
 ```
 
 - 시작일/종료일: YYYYMMDD 형식
