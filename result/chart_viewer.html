@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <title>RSI 시뮬레이션 차트 뷰어</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js Financial 플러그인 (캔들차트용) -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
+    <!-- Chart.js Annotation 플러그인 (기준선용) -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
     <style>
         body { font-family: 'Malgun Gothic', 'Arial', sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
         .container { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.08); padding: 24px; }
         h1 { text-align: center; margin-bottom: 24px; }
         .chart-block { margin-bottom: 40px; }
+        #priceChart, #rsiChart {
+            width: 100%;
+            height: 350px;
+            min-width: 300px;
+            min-height: 200px;
+        }
         @media (max-width: 600px) {
             .container { padding: 8px; }
+            #priceChart, #rsiChart { height: 220px; min-height: 120px; }
         }
     </style>
 </head>
@@ -25,79 +37,234 @@
     <div class="chart-block">
         <canvas id="rsiChart"></canvas>
     </div>
-    <div class="chart-block">
-        <canvas id="portfolioChart"></canvas>
-    </div>
 </div>
 <script>
 function getQueryParam(name) {
     const url = new URL(window.location.href);
     return url.searchParams.get(name);
 }
-const stockFile = getQueryParam('stock');
-const rsiFile = getQueryParam('rsi');
+const code = getQueryParam('code');
+const date = getQueryParam('date');
+const oversold = Number(getQueryParam('oversold'));
+const overbought = Number(getQueryParam('overbought'));
 
-if (!stockFile || !rsiFile) {
-    document.getElementById('meta').innerHTML = '<b style="color:red">stock, rsi 파라미터가 필요합니다.</b>';
-} else {
-    Promise.all([
-        fetch('data/일자/' + stockFile).then(res => res.json()),
-        fetch('data/일자/' + rsiFile).then(res => res.json())
+function toISOTime(localDateTime) {
+    // localDateTime: 'YYYYMMDDHHMMSS' -> 'YYYY-MM-DDTHH:MM'
+    // 변환 없이 원본 그대로 반환
+    return localDateTime;
+}
+
+function toHourMinute(localDateTime) {
+    // localDateTime: 'YYYYMMDDHHMMSS' -> 'HH:MM'
+    if (!localDateTime || localDateTime.length !== 14) return '';
+    const hh = localDateTime.slice(8, 10);
+    const mi = localDateTime.slice(10, 12);
+    return `${hh}:${mi}`;
+}
+
+function toHourMinuteSecond(localDateTime) {
+    // localDateTime: 'YYYYMMDDHHMMSS' -> 'HH:MM:SS'
+    if (!localDateTime || localDateTime.length !== 14) return '';
+    const hh = localDateTime.slice(8, 10);
+    const mi = localDateTime.slice(10, 12);
+    const ss = localDateTime.slice(12, 14);
+    return `${hh}:${mi}:${ss}`;
+}
+
+let priceChartInstance = null;
+let rsiChartInstance = null;
+
+function fetchStockAndRsi(code, date) {
+    const stockFile = `stock_data_${code}_${date}.json`;
+    const rsiFile = `rsi_data_${code}_${date}.json`;
+    return Promise.all([
+        fetch(`../data/${date}/${stockFile}`).then(res => res.json()),
+        fetch(`../data/${date}/${rsiFile}`).then(res => res.json())
     ]).then(([stockData, rsiData]) => {
-        renderCharts(stockData, rsiData);
-    }).catch(err => {
-        document.getElementById('meta').innerHTML = '<b style="color:red">JSON 파일을 불러올 수 없습니다.</b>';
+        return { stockData, rsiData };
     });
 }
 
+if (!code || !date || isNaN(oversold) || isNaN(overbought)) {
+    document.getElementById('meta').innerHTML = '<b style="color:red">code, date, oversold, overbought 파라미터가 필요합니다.</b>';
+} else {
+    fetchStockAndRsi(code, date)
+        .then(({ stockData, rsiData }) => {
+            renderCharts(stockData, rsiData);
+        })
+        .catch(err => {
+            document.getElementById('meta').innerHTML = '<b style="color:red">JSON 파일을 불러올 수 없습니다.</b>';
+        });
+}
+
 function renderCharts(stockData, rsiData) {
-    // 메타 정보 표시 (stockData, rsiData에서 종목코드, 날짜 등 활용)
     document.getElementById('meta').innerHTML = `
         <div style="text-align:center; margin-bottom:20px;">
-            <b>주가 종목코드:</b> ${stockData.stock_code} &nbsp;|
-            <b>RSI 종목코드:</b> ${rsiData.stock_code} &nbsp;|
-            <b>거래일자:</b> ${stockData.date || rsiData.date}
+            <b>종목코드:</b> ${stockData.stock_code || stockData.stock_code} &nbsp;|
+            <b>거래일자:</b> ${stockData.date || rsiData.date} &nbsp;|
+            <b>Oversold:</b> ${oversold} &nbsp;|
+            <b>Overbought:</b> ${overbought}
         </div>
     `;
+    // 기존 차트 인스턴스 제거 (초기화)
+    if (priceChartInstance) {
+        priceChartInstance.destroy();
+        priceChartInstance = null;
+    }
+    if (rsiChartInstance) {
+        rsiChartInstance.destroy();
+        rsiChartInstance = null;
+    }
     // 주가 데이터 준비
-    const stockArr = stockData.data;
-    const priceLabels = stockArr.map(x => x.localDateTime);
-    const prices = stockArr.map(x => x.currentPrice);
-
+    const stockArr = Array.isArray(stockData.data) ? stockData.data : (Array.isArray(stockData) ? stockData : []);
+    if (stockArr.length === 0) {
+        document.getElementById('meta').innerHTML += '<div style="color:red">주가 데이터가 없습니다.</div>';
+        return;
+    }
     // RSI 데이터 준비
-    const rsiArr = rsiData.data;
-    const rsiLabels = rsiArr.map(x => x.localDateTime);
-    const rsis = rsiArr.map(x => x.rsi);
+    const rsiArr = Array.isArray(rsiData.data) ? rsiData.data : (Array.isArray(rsiData) ? rsiData : []);
+    if (rsiArr.length === 0) {
+        document.getElementById('meta').innerHTML += '<div style="color:red">RSI 데이터가 없습니다.</div>';
+        return;
+    }
+    // RSI 라벨 및 값
+    const rsiLabels = rsiArr.map(x => toHourMinute(x.localDateTime));
+    const rsiValues = rsiArr.map(x => x.rsi);
 
-    // 주가 차트
-    new Chart(document.getElementById('priceChart').getContext('2d'), {
-        type: 'line',
+    // 캔들 라벨 및 값
+    const candleLabels = stockArr.map(x => toHourMinute(x.localDateTime));
+    const candleData = stockArr.map(x => ({
+        o: x.openPrice,
+        h: x.highPrice, 
+        l: x.lowPrice,
+        c: x.currentPrice
+    }));
+    
+    // 캔들 데이터 생성 
+    const candles = stockArr.map((x, i) => ({
+        x: i,
+        o: x.openPrice,
+        h: x.highPrice,
+        l: x.lowPrice, 
+        c: x.currentPrice
+    }));
+
+    // 캔들차트 생성 (Chart.js, x축 candleLabels 기준)
+    const priceChartCtx = document.getElementById('priceChart').getContext('2d');
+    priceChartInstance = new Chart(priceChartCtx, {
+        type: 'candlestick',
         data: {
-            labels: priceLabels,
-            datasets: [
-                { label: '주가', data: prices, borderColor: '#1976d2', backgroundColor: 'rgba(25,118,210,0.08)', fill: true, pointRadius: 0 }
-            ]
+            labels: candleLabels,
+            datasets: [{
+                label: '주가',
+                data: candles,
+                upColor: '#1976d2',         // 상승(양봉) 색상
+                downColor: '#e53935',       // 하락(음봉) 색상
+                borderColor: '#222',        // 테두리 색상
+                borderWidth: 1,             // 테두리 두께
+                barPercentage: 0.8,         // 캔들 두께(좁게)
+                categoryPercentage: 0.8     // 캔들 두께(좁게)
+            }]
         },
-        options: { responsive: true, plugins: { legend: { display: true } }, scales: { x: { display: false } } }
-    });
-    // RSI 차트
-    new Chart(document.getElementById('rsiChart').getContext('2d'), {
-        type: 'line',
-        data: { labels: rsiLabels, datasets: [
-            { label: 'RSI', data: rsis, borderColor: '#8e24aa', backgroundColor: 'rgba(142,36,170,0.08)', fill: true, pointRadius: 0 },
-        ]},
         options: {
             responsive: true,
-            plugins: { legend: { display: true } },
-            scales: {
-                y: { min: 0, max: 100, grid: { color: '#eee' } },
-                x: { display: false }
+            plugins: {
+                legend: { display: false },
+                title: { display: false }
             },
-            elements: { point: { radius: 0 } }
+            layout: {
+                padding: 0
+            },
+            scales: {
+                x: {
+                    type: 'category',
+                    ticks: {
+                        maxTicksLimit: 30,
+                        source: 'auto',
+                        autoSkip: true
+                    }
+                },
+                y: {
+                    beginAtZero: false,
+                    grid: { color: '#bbb', lineWidth: 1 },
+                    ticks: { color: '#222' }
+                }
+            }
         }
     });
-    // 포트폴리오 차트 숨김 처리
-    document.getElementById('portfolioChart').parentElement.style.display = 'none';
+
+    // RSI 차트 생성 (Chart.js, x축 rsiLabels 기준)
+    const rsiChartCtx = document.getElementById('rsiChart').getContext('2d');
+    rsiChartInstance = new Chart(rsiChartCtx, {
+        type: 'line',
+        data: {
+            labels: rsiLabels,
+            datasets: [{
+                label: 'RSI',
+                data: rsiValues,
+                borderColor: '#8e24aa',
+                backgroundColor: 'rgba(142,36,170,0.1)',
+                borderWidth: 2,
+                pointRadius: 0,
+                fill: false,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: false },
+                annotation: {
+                    annotations: {
+                        oversold: {
+                            type: 'line',
+                            yMin: oversold,
+                            yMax: oversold,
+                            borderColor: 'blue',
+                            borderWidth: 1,
+                            borderDash: [6, 6],
+                            label: {
+                                enabled: true,
+                                content: 'Oversold',
+                                position: 'start',
+                                color: 'blue',
+                                backgroundColor: '#fff'
+                            }
+                        },
+                        overbought: {
+                            type: 'line',
+                            yMin: overbought,
+                            yMax: overbought,
+                            borderColor: 'red',
+                            borderWidth: 1,
+                            borderDash: [6, 6],
+                            label: {
+                                enabled: true,
+                                content: 'Overbought',
+                                position: 'start',
+                                color: 'red',
+                                backgroundColor: '#fff'
+                            }
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    type: 'category',
+                    ticks: {
+                        maxTicksLimit: 20,
+                        autoSkip: true
+                    }
+                },
+                y: {
+                    beginAtZero: false,
+                    min: 0,
+                    max: 100
+                }
+            }
+        }
+    });
 }
 </script>
 </body>
